@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consecra — Daniel Fast &amp; Prayer · Support</title>
+  <meta name="description" content="Consecra is a Christian fasting companion for iPhone: a night-to-dawn fast timer, 11 guided biblical fasts, a Daniel Fast food guide and label scanner, prayer and journal — no ads, no tracking, no account. Também em português. También en español. Aussi en français.">
+  <meta name="theme-color" content="#141933">
+  <link rel="icon" href="app-icon.png">
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n-en="Skip to content" data-i18n-pt="Pular para o conteúdo" data-i18n-es="Saltar al contenido" data-i18n-fr="Aller au contenu">Skip to content</a>
+
+  <!-- Line icons, drawn once and reused with <use>. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-dawn" viewBox="0 0 24 24"><path d="M3 18.5h18"/><path d="M6.5 18.5a5.5 5.5 0 0 1 11 0"/><path d="M12 5.5v3M5.4 9l2 2M18.6 9l-2 2"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6.8C10 5.3 7 4.8 4 5.3v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5z"/><path d="M12 6.8v13"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19.5C5 11 10 5.5 19.5 4.5 19.5 14 14 19.5 6 19.5"/><path d="M5 19.5l7.5-7.5"/></symbol>
+    <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0z"/><path d="M9.5 8c0-1.3 1.2-1.7 1.2-3M13.5 8c0-1.3 1.2-1.7 1.2-3"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2.8c2.3 2.6 3.4 4.4 3.4 6.1a3.4 3.4 0 0 1-6.8 0c0-1.7 1.1-3.5 3.4-6.1z"/><path d="M9 14.5h6v6.7H9z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+    <symbol id="i-suns" viewBox="0 0 24 24"><circle cx="5" cy="14" r="2"/><circle cx="12" cy="8" r="2"/><circle cx="19" cy="14" r="2"/><path d="M2.5 19h19"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.8"/><path d="M9.5 7h5M9.5 10.5h5"/><circle cx="12" cy="16.5" r="1.4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="sun" d="M8 22a8 8 0 0 1 16 0z"/><path class="rays" d="M16 5.5v4M7 10.2l2.7 2.7M25 10.2l-2.7 2.7" fill="none" stroke-width="2" stroke-linecap="round"/><path class="line" d="M3.5 25.5h25" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+        Consecra
+      </a>
+      <nav class="nav-links" aria-label="Site" data-i18n-aria-en="Site" data-i18n-aria-pt="Site" data-i18n-aria-es="Sitio" data-i18n-aria-fr="Site">
+        <a href="#features" data-i18n-en="Features" data-i18n-pt="Recursos" data-i18n-es="Funciones" data-i18n-fr="Fonctionnalités">Features</a>
+        <a href="#journeys" data-i18n-en="Journeys" data-i18n-pt="Jornadas" data-i18n-es="Recorridos" data-i18n-fr="Parcours">Journeys</a>
+        <a href="#plus">Plus</a>
+        <a href="#faq" data-i18n-en="FAQ" data-i18n-pt="Perguntas" data-i18n-es="Preguntas" data-i18n-fr="Questions">FAQ</a>
+        <a href="privacy.html" data-i18n-en="Privacy" data-i18n-pt="Privacidade" data-i18n-es="Privacidad" data-i18n-fr="Confidentialité">Privacy</a>
+      </nav>
+      <div class="nav-right">
+        <div class="langtabs" role="tablist" aria-label="Language" data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma" data-i18n-aria-fr="Langue">
+          <button type="button" role="tab" data-lang-target="en" lang="en" aria-label="English">EN</button>
+          <button type="button" role="tab" data-lang-target="pt" lang="pt-BR" aria-label="Português (Brasil)">PT</button>
+          <button type="button" role="tab" data-lang-target="es" lang="es" aria-label="Español">ES</button>
+          <button type="button" role="tab" data-lang-target="fr" lang="fr" aria-label="Français">FR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- =============================================================== HERO -->
+    <section class="sky">
+      <div class="wrap hero">
+        <div data-lang="en" lang="en">
+          <img class="icon" src="app-icon.png" width="120" height="120" alt="Consecra app icon: an empty bowl filled with dawn light" data-rise style="animation-delay:.05s">
+          <div data-rise style="animation-delay:.12s"><span class="kicker">Christian fasting &amp; prayer</span></div>
+          <h1 data-rise style="animation-delay:.18s">Consecra</h1>
+          <p class="tagline" data-rise style="animation-delay:.26s">Guided biblical fasts, a timer that turns hunger into prayer, and everything you need for the Daniel Fast.</p>
+          <p class="meta" data-rise style="animation-delay:.32s">iPhone · iOS 17 or later · No account</p>
+          <figure class="verse" data-rise style="animation-delay:.4s">
+            <blockquote><p>“Then your light will break out as the morning…”</p></blockquote>
+            <figcaption>Isaiah 58:8 · World English Bible Updated</figcaption>
+          </figure>
+        </div>
+        <div data-lang="pt" lang="pt-BR">
+          <img class="icon" src="app-icon.png" width="120" height="120" alt="Ícone do aplicativo Consecra: uma tigela vazia cheia da luz da aurora" data-rise style="animation-delay:.05s">
+          <div data-rise style="animation-delay:.12s"><span class="kicker">Jejum e oração cristã</span></div>
+          <h1 data-rise style="animation-delay:.18s">Consecra</h1>
+          <p class="tagline" data-rise style="animation-delay:.26s">Jejuns bíblicos guiados, um cronômetro que transforma a fome em oração e tudo o que você precisa para o Jejum de Daniel.</p>
+          <p class="meta" data-rise style="animation-delay:.32s">iPhone · iOS 17 ou posterior · Sem conta</p>
+          <figure class="verse" data-rise style="animation-delay:.4s">
+            <blockquote><p>“Então a sua luz romperá como a manhã…”</p></blockquote>
+            <figcaption>Isaías 58:8 · Bíblia Portuguesa Mundial</figcaption>
+          </figure>
+        </div>
+        <div data-lang="es" lang="es">
+          <img class="icon" src="app-icon.png" width="120" height="120" alt="Ícono de la aplicación Consecra: un tazón vacío lleno de la luz del amanecer" data-rise style="animation-delay:.05s">
+          <div data-rise style="animation-delay:.12s"><span class="kicker">Ayuno cristiano y oración</span></div>
+          <h1 data-rise style="animation-delay:.18s">Consecra</h1>
+          <p class="tagline" data-rise style="animation-delay:.26s">Ayunos bíblicos guiados, un temporizador que convierte el hambre en oración y todo lo que necesitas para el Ayuno de Daniel.</p>
+          <p class="meta" data-rise style="animation-delay:.32s">iPhone · iOS 17 o posterior · Sin cuenta</p>
+          <figure class="verse" data-rise style="animation-delay:.4s">
+            <blockquote><p>«Entonces nacerá tu luz como el alba…»</p></blockquote>
+            <figcaption>Isaías 58:8 · Reina-Valera 1909</figcaption>
+          </figure>
+        </div>
+        <div data-lang="fr" lang="fr">
+          <img class="icon" src="app-icon.png" width="120" height="120" alt="Icône de l’application Consecra&nbsp;: un bol vide rempli de la lumière de l’aube" data-rise style="animation-delay:.05s">
+          <div data-rise style="animation-delay:.12s"><span class="kicker">Jeûne chrétien et prière</span></div>
+          <h1 data-rise style="animation-delay:.18s">Consecra</h1>
+          <p class="tagline" data-rise style="animation-delay:.26s">Des jeûnes bibliques guidés, un minuteur qui change la faim en prière, et tout ce qu’il te faut pour le jeûne de Daniel.</p>
+          <p class="meta" data-rise style="animation-delay:.32s">iPhone · iOS 17 ou ultérieur · Sans compte</p>
+          <figure class="verse" data-rise style="animation-delay:.4s">
+            <blockquote><p>«&nbsp;Alors ta lumière poindra comme l’aurore…&nbsp;»</p></blockquote>
+            <figcaption>Ésaïe 58:8 · Louis Segond 1910</figcaption>
+          </figure>
+        </div>
+      </div>
+      <!-- The app's dawn timer: a sun a third of the way up its arc. -->
+      <svg class="horizon" viewBox="0 -24 1200 224" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id="sunglow">
+            <stop offset="0" stop-color="#FFF3D1"/>
+            <stop offset="0.35" stop-color="#F2C14E" stop-opacity="0.9"/>
+            <stop offset="1" stop-color="#E07A3A" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <path d="M80 170 A520 150 0 0 1 1120 170" fill="none" stroke="#F2C14E" stroke-opacity="0.5" stroke-width="2.5" stroke-dasharray="0.5 11" stroke-linecap="round"/>
+        <path d="M80 170 A520 150 0 0 1 364 36.4" fill="none" stroke="#F2C14E" stroke-opacity="0.85" stroke-width="2.5" stroke-linecap="round"/>
+        <g class="climb">
+          <circle cx="364" cy="36.4" r="52" fill="url(#sunglow)" opacity="0.75"/>
+          <circle cx="364" cy="36.4" r="12" fill="#F2C14E"/>
+        </g>
+        <path d="M0 170.5H1200" stroke="#F7F3EA" stroke-opacity="0.35" stroke-width="1.2"/>
+      </svg>
+    </section>
+
+    <!-- =============================================================== FEATURES -->
+    <section class="block wrap" id="features">
+      <div data-lang="en" lang="en">
+        <div class="section-head center">
+          <span class="kicker">What’s inside</span>
+          <h2>Everything for a season of fasting</h2>
+          <p>Consecra brings the fast, the Word and your prayers into one calm place. It works offline, and your fasts, prayers and journal stay on your iPhone.</p>
+        </div>
+        <div class="grid">
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-dawn"/></svg></div><h3>The dawn timer</h3><p>Choose a length or a time to end, and watch the night sky turn to dawn as your fast goes on. A Live Activity keeps the countdown on your Lock Screen and in the Dynamic Island.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-book"/></svg></div><h3>Eleven guided journeys</h3><p>From a gentle first fast to forty days in the wilderness, each day brings scripture, a devotional, a prayer, a reflection and a practical tip.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><h3>Daniel Fast food guide</h3><p>“Can I eat…?” Search 350 foods for a clear yes, no or check, with a line on why — or scan an ingredient label.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-bowl"/></svg></div><h3>Recipes and a meal plan</h3><p>Simple Daniel Fast meals from around the world, and a 7-day meal plan to make the first week easier.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-flame"/></svg></div><h3>Prayer intentions</h3><p>Keep the people and needs you are praying for, and mark answered prayers with the date and a note of thanks.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><h3>Journal and history</h3><p>Write a line or a page about what God is showing you, and look back on fasts kept, hours given, journeys completed and a calendar of fasting days.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-suns"/></svg></div><h3>Pray like Daniel</h3><p>Three reminders a day — morning, noon and evening — after Daniel 6:10, each with a short verse.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></div><h3>Widgets</h3><p>Your fast, your journey day and a daily verse, one glance away on your Home Screen and Lock Screen.</p></div>
+        </div>
+      </div>
+      <div data-lang="pt" lang="pt-BR">
+        <div class="section-head center">
+          <span class="kicker">Por dentro do app</span>
+          <h2>Tudo para um tempo de jejum</h2>
+          <p>O Consecra reúne o jejum, a Palavra e as suas orações em um só lugar, sereno. Funciona offline, e seus jejuns, orações e diário ficam no seu iPhone.</p>
+        </div>
+        <div class="grid">
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-dawn"/></svg></div><h3>O cronômetro da aurora</h3><p>Escolha uma duração ou um horário para terminar e veja o céu da noite virar aurora enquanto o jejum avança. Uma Atividade ao Vivo mantém a contagem regressiva na Tela Bloqueada e na Dynamic Island.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-book"/></svg></div><h3>Onze jornadas guiadas</h3><p>De um primeiro jejum suave aos quarenta dias no deserto, cada dia traz Escritura, um devocional, uma oração, uma reflexão e uma dica prática.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><h3>Guia de alimentos do Jejum de Daniel</h3><p>“Posso comer…?” Pesquise 350 alimentos e receba um sim, um não ou um verificar, com o motivo — ou escaneie o rótulo de ingredientes.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-bowl"/></svg></div><h3>Receitas e cardápio</h3><p>Refeições simples do Jejum de Daniel de várias partes do mundo e um cardápio de 7 dias para facilitar a primeira semana.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-flame"/></svg></div><h3>Pedidos de oração</h3><p>Guarde as pessoas e as necessidades pelas quais você ora e marque as orações respondidas com a data e uma palavra de gratidão.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><h3>Diário e histórico</h3><p>Escreva uma linha ou uma página sobre o que Deus está mostrando a você e reveja os jejuns cumpridos, as horas dedicadas, as jornadas concluídas e um calendário dos seus dias de jejum.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-suns"/></svg></div><h3>Orar como Daniel</h3><p>Três lembretes por dia — de manhã, ao meio-dia e à tarde —, como em Daniel 6:10, cada um com um versículo curto.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></div><h3>Widgets</h3><p>Seu jejum, o dia da sua jornada e um versículo diário, a um olhar de distância na Tela de Início e na Tela Bloqueada.</p></div>
+        </div>
+      </div>
+      <div data-lang="es" lang="es">
+        <div class="section-head center">
+          <span class="kicker">Lo que incluye</span>
+          <h2>Todo para un tiempo de ayuno</h2>
+          <p>Consecra reúne el ayuno, la Palabra y tus oraciones en un solo lugar sereno. Funciona sin conexión, y tus ayunos, oraciones y diario se quedan en tu iPhone.</p>
+        </div>
+        <div class="grid">
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-dawn"/></svg></div><h3>El temporizador del alba</h3><p>Elige una duración o una hora para terminar, y mira cómo el cielo nocturno se vuelve alba mientras avanza tu ayuno. Una Actividad en vivo mantiene la cuenta regresiva en la pantalla bloqueada y en la Dynamic Island.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-book"/></svg></div><h3>Once recorridos guiados</h3><p>Desde un primer ayuno sencillo hasta cuarenta días en el desierto, cada día trae Escritura, un devocional, una oración, una reflexión y un consejo práctico.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><h3>Guía de alimentos del Ayuno de Daniel</h3><p>«¿Puedo comer…?» Busca entre 350 alimentos y obtén un sí, un no o un revisar, con el porqué, o escanea la etiqueta de ingredientes.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-bowl"/></svg></div><h3>Recetas y plan de comidas</h3><p>Comidas sencillas del Ayuno de Daniel de todo el mundo y un plan de comidas de 7 días para facilitar la primera semana.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-flame"/></svg></div><h3>Peticiones de oración</h3><p>Guarda las personas y necesidades por las que oras, y marca las oraciones respondidas con la fecha y una palabra de gratitud.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><h3>Diario e historial</h3><p>Escribe una línea o una página sobre lo que Dios te está mostrando, y repasa los ayunos cumplidos, las horas dedicadas, los recorridos completados y un calendario de tus días de ayuno.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-suns"/></svg></div><h3>Orar como Daniel</h3><p>Tres recordatorios al día —mañana, mediodía y tarde—, como en Daniel 6:10, cada uno con un versículo breve.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></div><h3>Widgets</h3><p>Tu ayuno, el día de tu recorrido y un versículo diario, a un vistazo en la pantalla de inicio y en la pantalla bloqueada.</p></div>
+        </div>
+      </div>
+      <div data-lang="fr" lang="fr">
+        <div class="section-head center">
+          <span class="kicker">À l’intérieur</span>
+          <h2>Tout pour un temps de jeûne</h2>
+          <p>Consecra rassemble le jeûne, la Parole et tes prières en un seul lieu paisible. Elle fonctionne hors ligne, et tes jeûnes, tes prières et ton journal restent sur ton iPhone.</p>
+        </div>
+        <div class="grid">
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-dawn"/></svg></div><h3>Le minuteur de l’aube</h3><p>Choisis une durée ou une heure de fin, et regarde le ciel de la nuit se changer en aube à mesure que ton jeûne avance. Une activité en direct garde le compte à rebours sur l’écran verrouillé et dans la Dynamic Island.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-book"/></svg></div><h3>Onze parcours guidés</h3><p>D’un premier jeûne tout en douceur aux quarante jours au désert, chaque jour t’apporte un passage de l’Écriture, une méditation, une prière, une réflexion et un conseil pratique.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><h3>Guide alimentaire du jeûne de Daniel</h3><p>«&nbsp;Puis-je manger…&nbsp;?&nbsp;» Cherche parmi 350 aliments et obtiens un oui, un non ou un «&nbsp;à vérifier&nbsp;», avec la raison — ou scanne une étiquette d’ingrédients.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-bowl"/></svg></div><h3>Recettes et menu de la semaine</h3><p>Des plats simples du jeûne de Daniel venus du monde entier, et un menu de 7&nbsp;jours pour faciliter la première semaine.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-flame"/></svg></div><h3>Intentions de prière</h3><p>Garde les personnes et les besoins pour lesquels tu pries, et marque les prières exaucées avec la date et un mot de reconnaissance.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-pen"/></svg></div><h3>Journal et historique</h3><p>Écris une ligne ou une page sur ce que Dieu te montre, et revois les jeûnes tenus, les heures données, les parcours terminés et un calendrier de tes jours de jeûne.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-suns"/></svg></div><h3>Prier comme Daniel</h3><p>Trois rappels par jour — le matin, à midi et le soir — à l’exemple de Daniel 6:10, chacun avec un court verset.</p></div>
+          <div class="feature"><div class="ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></div><h3>Widgets</h3><p>Ton jeûne, le jour de ton parcours et un verset du jour, d’un coup d’œil sur l’écran d’accueil et l’écran verrouillé.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================== JOURNEYS -->
+    <section class="block wrap" id="journeys">
+      <div data-lang="en" lang="en">
+        <div class="section-head center">
+          <span class="kicker">Guided journeys</span>
+          <h2>Eleven ways to fast with Scripture</h2>
+          <p>Pick a journey and a start date. Each day opens with a reading and a key verse, a devotional, a prayer, a reflection question and a practical tip.</p>
+        </div>
+        <ul class="journeys">
+          <li class="journey"><span class="len"><b>1</b><small>day</small></span><div><h3>Your First Fast</h3><p>A gentle one-day fast, from preparation to the first meal</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>days</small></span><div><h3>The Daniel Fast</h3><p>21 days of simple food and wholehearted prayer</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>days</small></span><div><h3>21 Days of Prayer &amp; Fasting</h3><p>Give the first days of a new season to God</p></div></li>
+          <li class="journey"><span class="len"><b>40</b><small>days</small></span><div><h3>Forty Days in the Wilderness <span class="tag">Lent</span></h3><p>Walk with Jesus from the Jordan to the empty tomb</p></div></li>
+          <li class="journey"><span class="len"><b>24</b><small>days</small></span><div><h3>Advent Fast</h3><p>24 days of watchful waiting for the coming of Christ</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>days</small></span><div><h3>Esther’s Fast</h3><p>Three days of courage and intercession for others</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>days</small></span><div><h3>The Fast of Nineveh</h3><p>Three days of repentance with the book of Jonah</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>days</small></span><div><h3>The Chosen Fast <span class="tag">Isaiah 58</span></h3><p>Seven days of fasting that frees, feeds and restores</p></div></li>
+          <li class="journey"><span class="len wk"><b>Wed<br>Fri</b></span><div><h3>Wednesday &amp; Friday Fast</h3><p>An ancient weekly rhythm of hunger, prayer and giving</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>days</small></span><div><h3>Media Fast</h3><p>Seven days away from the feed to hear God’s voice</p></div></li>
+          <li class="journey"><span class="len"><b>1</b><small>day</small></span><div><h3>Ezra’s Fast</h3><p>One day of fasting for guidance before a decision or journey</p></div></li>
+        </ul>
+        <p class="each-day"><strong>Free to begin.</strong> Your First Fast and Ezra’s Fast are free in full, and every other journey opens its first days for free. Consecra Plus unlocks every day.</p>
+      </div>
+      <div data-lang="pt" lang="pt-BR">
+        <div class="section-head center">
+          <span class="kicker">Jornadas guiadas</span>
+          <h2>Onze maneiras de jejuar com as Escrituras</h2>
+          <p>Escolha uma jornada e uma data de início. Cada dia começa com uma leitura e um versículo-chave, um devocional, uma oração, uma pergunta para reflexão e uma dica prática.</p>
+        </div>
+        <ul class="journeys">
+          <li class="journey"><span class="len"><b>1</b><small>dia</small></span><div><h3>Seu primeiro jejum</h3><p>Um jejum suave de um dia, da preparação à primeira refeição</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>dias</small></span><div><h3>O Jejum de Daniel</h3><p>21 dias de comida simples e oração de todo o coração</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>dias</small></span><div><h3>21 dias de jejum e oração</h3><p>Entregue a Deus os primeiros dias de um novo tempo</p></div></li>
+          <li class="journey"><span class="len"><b>40</b><small>dias</small></span><div><h3>Quarenta dias no deserto <span class="tag">Quaresma</span></h3><p>Caminhe com Jesus do Jordão até o túmulo vazio</p></div></li>
+          <li class="journey"><span class="len"><b>24</b><small>dias</small></span><div><h3>Jejum do Advento</h3><p>24 dias de espera vigilante pela vinda de Cristo</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>dias</small></span><div><h3>O Jejum de Ester</h3><p>Três dias de coragem e intercessão pelos outros</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>dias</small></span><div><h3>O Jejum de Nínive</h3><p>Três dias de arrependimento com o livro de Jonas</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>dias</small></span><div><h3>O jejum que Deus escolheu <span class="tag">Isaías 58</span></h3><p>Sete dias de jejum que liberta, alimenta e restaura</p></div></li>
+          <li class="journey"><span class="len wk"><b>Qua<br>Sex</b></span><div><h3>Jejum às quartas e sextas</h3><p>Um antigo ritmo semanal de fome, oração e generosidade</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>dias</small></span><div><h3>Jejum de mídias</h3><p>Sete dias longe do feed para ouvir a voz de Deus</p></div></li>
+          <li class="journey"><span class="len"><b>1</b><small>dia</small></span><div><h3>O Jejum de Esdras</h3><p>Um dia de jejum por direção antes de uma decisão ou viagem</p></div></li>
+        </ul>
+        <p class="each-day"><strong>Comece grátis.</strong> “Seu primeiro jejum” e “O Jejum de Esdras” são gratuitos por completo, e todas as outras jornadas abrem os primeiros dias de graça. O Consecra Plus libera todos os dias.</p>
+      </div>
+      <div data-lang="es" lang="es">
+        <div class="section-head center">
+          <span class="kicker">Recorridos guiados</span>
+          <h2>Once maneras de ayunar con la Escritura</h2>
+          <p>Elige un recorrido y una fecha de inicio. Cada día empieza con una lectura y un versículo clave, un devocional, una oración, una pregunta de reflexión y un consejo práctico.</p>
+        </div>
+        <ul class="journeys">
+          <li class="journey"><span class="len"><b>1</b><small>día</small></span><div><h3>Tu primer ayuno</h3><p>Un ayuno sencillo de un día, de la preparación a la primera comida</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>días</small></span><div><h3>El Ayuno de Daniel</h3><p>21 días de comida sencilla y oración de todo corazón</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>días</small></span><div><h3>21 días de ayuno y oración</h3><p>Entrega a Dios los primeros días de una nueva etapa</p></div></li>
+          <li class="journey"><span class="len"><b>40</b><small>días</small></span><div><h3>Cuarenta días en el desierto <span class="tag">Cuaresma</span></h3><p>Camina con Jesús desde el Jordán hasta la tumba vacía</p></div></li>
+          <li class="journey"><span class="len"><b>24</b><small>días</small></span><div><h3>Ayuno de Adviento</h3><p>24 días de espera vigilante por la venida de Cristo</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>días</small></span><div><h3>El ayuno de Ester</h3><p>Tres días de valentía e intercesión por otros</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>días</small></span><div><h3>El Ayuno de Nínive</h3><p>Tres días de arrepentimiento con el libro de Jonás</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>días</small></span><div><h3>El ayuno que Dios escoge <span class="tag">Isaías 58</span></h3><p>Siete días de ayuno que libera, alimenta y restaura</p></div></li>
+          <li class="journey"><span class="len wk"><b>Mié<br>Vie</b></span><div><h3>Ayuno de miércoles y viernes</h3><p>Un antiguo ritmo semanal de hambre, oración y generosidad</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>días</small></span><div><h3>Ayuno digital</h3><p>Siete días lejos de las redes para escuchar la voz de Dios</p></div></li>
+          <li class="journey"><span class="len"><b>1</b><small>día</small></span><div><h3>El ayuno de Esdras</h3><p>Un día de ayuno para pedir dirección ante una decisión o un viaje</p></div></li>
+        </ul>
+        <p class="each-day"><strong>Empieza gratis.</strong> «Tu primer ayuno» y «El ayuno de Esdras» son gratuitos por completo, y todos los demás recorridos abren sus primeros días gratis. Consecra Plus desbloquea todos los días.</p>
+      </div>
+      <div data-lang="fr" lang="fr">
+        <div class="section-head center">
+          <span class="kicker">Parcours guidés</span>
+          <h2>Onze façons de jeûner avec l’Écriture</h2>
+          <p>Choisis un parcours et une date de début. Chaque jour s’ouvre sur une lecture et un verset clé, une méditation, une prière, une question de réflexion et un conseil pratique.</p>
+        </div>
+        <ul class="journeys">
+          <li class="journey"><span class="len"><b>1</b><small>jour</small></span><div><h3>Ton premier jeûne</h3><p>Un jeûne doux d’une journée, de la préparation au premier repas</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>jours</small></span><div><h3>Le jeûne de Daniel</h3><p>21 jours de repas simples et de prière de tout cœur</p></div></li>
+          <li class="journey"><span class="len"><b>21</b><small>jours</small></span><div><h3>21 jours de jeûne et de prière</h3><p>Consacre à Dieu les premiers jours d’une saison nouvelle</p></div></li>
+          <li class="journey"><span class="len"><b>40</b><small>jours</small></span><div><h3>Quarante jours au désert <span class="tag">Carême</span></h3><p>Marche avec Jésus du Jourdain jusqu’au tombeau vide</p></div></li>
+          <li class="journey"><span class="len"><b>24</b><small>jours</small></span><div><h3>Jeûne de l’Avent</h3><p>24 jours d’attente vigilante de la venue du Christ</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>jours</small></span><div><h3>Le jeûne d’Esther</h3><p>Trois jours de courage et d’intercession pour les autres</p></div></li>
+          <li class="journey"><span class="len"><b>3</b><small>jours</small></span><div><h3>Le jeûne de Ninive</h3><p>Trois jours de repentance avec le livre de Jonas</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>jours</small></span><div><h3>Le jeûne qui plaît à Dieu <span class="tag">Ésaïe 58</span></h3><p>Sept jours de jeûne qui libère, nourrit et relève</p></div></li>
+          <li class="journey"><span class="len wk"><b>Mer<br>Ven</b></span><div><h3>Jeûne du mercredi et du vendredi</h3><p>Un ancien rythme hebdomadaire de faim, de prière et de don</p></div></li>
+          <li class="journey"><span class="len"><b>7</b><small>jours</small></span><div><h3>Jeûne des écrans</h3><p>Sept jours loin du fil d’actualité pour entendre la voix de Dieu</p></div></li>
+          <li class="journey"><span class="len"><b>1</b><small>jour</small></span><div><h3>Le jeûne d’Esdras</h3><p>Un jour de jeûne pour chercher la direction de Dieu avant un départ</p></div></li>
+        </ul>
+        <p class="each-day"><strong>Commence gratuitement.</strong> «&nbsp;Ton premier jeûne&nbsp;» et «&nbsp;Le jeûne d’Esdras&nbsp;» sont entièrement gratuits, et tous les autres parcours offrent leurs premiers jours. Consecra Plus débloque tous les jours.</p>
+      </div>
+    </section>
+
+    <!-- =============================================================== FOOD GUIDE -->
+    <section class="block wrap" id="food">
+      <div data-lang="en" lang="en">
+        <div class="spot">
+          <div>
+            <span class="kicker">Daniel Fast food guide</span>
+            <h2>“Can I eat…?” answered in a second</h2>
+            <p>Search 350 foods and drinks in your language. Each one gets a clear Yes, No or Check, with a short note on why — and Check items explain how churches differ, so you can follow the guidelines your church or group is using.</p>
+            <p>At the store, use the label scanner: photograph the ingredient list or paste it, and Consecra flags the ingredients the Daniel Fast leaves out, like sugar, honey, yeast, milk, whey, eggs or butter.</p>
+            <ul class="ticks">
+              <li>Text is read on your iPhone, even offline</li>
+              <li>Photos are never stored or sent</li>
+              <li>The food guide and scanner are free</li>
+            </ul>
+          </div>
+          <figure class="mock">
+            <div class="search"><svg aria-hidden="true"><use href="#i-search"/></svg>Can I eat…?</div>
+            <ul>
+              <li><span class="food">Oats</span><span class="verdict v-yes">Yes</span></li>
+              <li><span class="food">Peanut butter</span><span class="verdict v-check">Check</span></li>
+              <li><span class="food">Honey</span><span class="verdict v-no">No</span></li>
+            </ul>
+            <figcaption class="caption">Examples from the food guide</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div data-lang="pt" lang="pt-BR">
+        <div class="spot">
+          <div>
+            <span class="kicker">Guia de alimentos</span>
+            <h2>“Posso comer…?” respondido num instante</h2>
+            <p>Pesquise 350 alimentos e bebidas no seu idioma. Cada um recebe um Sim, Não ou Verificar claro, com uma nota curta explicando o porquê — e os itens Verificar mostram como as igrejas diferem, para você seguir as orientações da sua igreja ou do seu grupo.</p>
+            <p>No mercado, use o leitor de rótulos: fotografe a lista de ingredientes ou cole o texto, e o Consecra aponta os ingredientes que o Jejum de Daniel deixa de fora, como açúcar, mel, fermento, leite, soro de leite, ovos ou manteiga.</p>
+            <ul class="ticks">
+              <li>O texto é lido no seu iPhone, mesmo offline</li>
+              <li>As fotos nunca são guardadas nem enviadas</li>
+              <li>O guia de alimentos e o leitor de rótulos são gratuitos</li>
+            </ul>
+          </div>
+          <figure class="mock">
+            <div class="search"><svg aria-hidden="true"><use href="#i-search"/></svg>Posso comer…?</div>
+            <ul>
+              <li><span class="food">Aveia</span><span class="verdict v-yes">Sim</span></li>
+              <li><span class="food">Pasta de amendoim</span><span class="verdict v-check">Verificar</span></li>
+              <li><span class="food">Mel</span><span class="verdict v-no">Não</span></li>
+            </ul>
+            <figcaption class="caption">Exemplos do guia de alimentos</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div data-lang="es" lang="es">
+        <div class="spot">
+          <div>
+            <span class="kicker">Guía de alimentos</span>
+            <h2>«¿Puedo comer…?», resuelto en un segundo</h2>
+            <p>Busca entre 350 alimentos y bebidas en tu idioma. Cada uno recibe un Sí, No o Revisar claro, con una nota breve del porqué, y los elementos Revisar explican en qué difieren las iglesias, para que sigas las pautas de tu iglesia o grupo.</p>
+            <p>En la tienda, usa el escáner de etiquetas: fotografía la lista de ingredientes o pega el texto, y Consecra señala los ingredientes que el Ayuno de Daniel deja fuera, como azúcar, miel, levadura, leche, suero de leche, huevo o mantequilla.</p>
+            <ul class="ticks">
+              <li>El texto se lee en tu iPhone, incluso sin conexión</li>
+              <li>Las fotos nunca se guardan ni se envían</li>
+              <li>La guía de alimentos y el escáner son gratuitos</li>
+            </ul>
+          </div>
+          <figure class="mock">
+            <div class="search"><svg aria-hidden="true"><use href="#i-search"/></svg>¿Puedo comer…?</div>
+            <ul>
+              <li><span class="food">Avena</span><span class="verdict v-yes">Sí</span></li>
+              <li><span class="food">Crema de cacahuate</span><span class="verdict v-check">Revisar</span></li>
+              <li><span class="food">Miel</span><span class="verdict v-no">No</span></li>
+            </ul>
+            <figcaption class="caption">Ejemplos de la guía de alimentos</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div data-lang="fr" lang="fr">
+        <div class="spot">
+          <div>
+            <span class="kicker">Guide alimentaire</span>
+            <h2>«&nbsp;Puis-je manger…&nbsp;?&nbsp;»&nbsp;: la réponse en une seconde</h2>
+            <p>Cherche parmi 350 aliments et boissons dans ta langue. Chacun reçoit un Oui, un Non ou un À vérifier clair, avec une courte note qui explique pourquoi — et les éléments «&nbsp;À vérifier&nbsp;» montrent en quoi les Églises diffèrent, pour que tu suives les consignes de ton Église ou de ton groupe.</p>
+            <p>Au magasin, utilise le scanner d’étiquettes&nbsp;: photographie la liste d’ingrédients ou colle le texte, et Consecra signale les ingrédients que le jeûne de Daniel laisse de côté, comme le sucre, le miel, la levure, le lait, le lactosérum, les œufs ou le beurre.</p>
+            <ul class="ticks">
+              <li>Le texte est lu sur ton iPhone, même hors ligne</li>
+              <li>Les photos ne sont jamais conservées ni envoyées</li>
+              <li>Le guide alimentaire et le scanner sont gratuits</li>
+            </ul>
+          </div>
+          <figure class="mock">
+            <div class="search"><svg aria-hidden="true"><use href="#i-search"/></svg>Puis-je manger…&nbsp;?</div>
+            <ul>
+              <li><span class="food">Flocons d’avoine</span><span class="verdict v-yes">Oui</span></li>
+              <li><span class="food">Beurre de cacahuète</span><span class="verdict v-check">À vérifier</span></li>
+              <li><span class="food">Miel</span><span class="verdict v-no">Non</span></li>
+            </ul>
+            <figcaption class="caption">Exemples tirés du guide alimentaire</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================== GROUP FASTS -->
+    <section class="block wrap" id="together">
+      <div data-lang="en" lang="en">
+        <div class="spot">
+          <div>
+            <span class="kicker">Group fasts</span>
+            <h2>Fast together, from the same first day</h2>
+            <p>Invite your church, small group or family. Everyone who opens the link starts the same journey on the same day — no accounts, no sign-ups and no server in between.</p>
+          </div>
+          <ol class="steps">
+            <li><strong>Begin a journey</strong>Pick a journey and a start date, and add your church or group name if you like.</li>
+            <li><strong>Share the invitation</strong>From the journey’s menu, choose Fast together and share the link, or show the QR code on screen during a service or meeting.</li>
+            <li><strong>Everyone joins</strong>Friends open the link, tap Open in Consecra and join the fast. Joining is free; creating a group fast is part of Consecra Plus.</li>
+          </ol>
+        </div>
+      </div>
+      <div data-lang="pt" lang="pt-BR">
+        <div class="spot">
+          <div>
+            <span class="kicker">Jejuns em grupo</span>
+            <h2>Jejuem juntos, a partir do mesmo primeiro dia</h2>
+            <p>Convide sua igreja, seu pequeno grupo ou sua família. Todos que abrem o link começam a mesma jornada no mesmo dia — sem contas, sem cadastro e sem servidor no meio do caminho.</p>
+          </div>
+          <ol class="steps">
+            <li><strong>Comece uma jornada</strong>Escolha uma jornada e uma data de início e, se quiser, adicione o nome da sua igreja ou grupo.</li>
+            <li><strong>Compartilhe o convite</strong>No menu da jornada, escolha Jejuar juntos e compartilhe o link, ou mostre o QR code na tela durante um culto ou encontro.</li>
+            <li><strong>Todos participam</strong>Os amigos abrem o link, tocam em Abrir no Consecra e entram no jejum. Participar é grátis; criar um jejum em grupo faz parte do Consecra Plus.</li>
+          </ol>
+        </div>
+      </div>
+      <div data-lang="es" lang="es">
+        <div class="spot">
+          <div>
+            <span class="kicker">Ayunos en grupo</span>
+            <h2>Ayunen juntos desde el mismo primer día</h2>
+            <p>Invita a tu iglesia, a tu grupo pequeño o a tu familia. Todos los que abren el enlace empiezan el mismo recorrido el mismo día, sin cuentas, sin registros y sin servidores de por medio.</p>
+          </div>
+          <ol class="steps">
+            <li><strong>Empieza un recorrido</strong>Elige un recorrido y una fecha de inicio y, si quieres, añade el nombre de tu iglesia o grupo.</li>
+            <li><strong>Comparte la invitación</strong>En el menú del recorrido, elige Ayunar juntos y comparte el enlace, o muestra el código QR en pantalla durante un culto o una reunión.</li>
+            <li><strong>Todos se unen</strong>Tus amigos abren el enlace, tocan Abrir en Consecra y se unen al ayuno. Unirse es gratis; crear un ayuno en grupo forma parte de Consecra Plus.</li>
+          </ol>
+        </div>
+      </div>
+      <div data-lang="fr" lang="fr">
+        <div class="spot">
+          <div>
+            <span class="kicker">Jeûnes en groupe</span>
+            <h2>Jeûner ensemble, dès le même premier jour</h2>
+            <p>Invite ton Église, ton groupe de maison ou ta famille. Tous ceux qui ouvrent le lien commencent le même parcours le même jour — sans compte, sans inscription et sans serveur entre vous.</p>
+          </div>
+          <ol class="steps">
+            <li><strong>Commence un parcours</strong>Choisis un parcours et une date de début et, si tu veux, ajoute le nom de ton Église ou de ton groupe.</li>
+            <li><strong>Partage l’invitation</strong>Dans le menu du parcours, choisis Jeûner ensemble et partage le lien, ou affiche le QR code à l’écran pendant un culte ou une rencontre.</li>
+            <li><strong>Tout le monde rejoint</strong>Tes amis ouvrent le lien, touchent Ouvrir dans Consecra et rejoignent le jeûne. Rejoindre est gratuit&nbsp;; créer un jeûne en groupe fait partie de Consecra Plus.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================== FREE & PLUS -->
+    <section class="block wrap" id="plus">
+      <div data-lang="en" lang="en">
+        <div class="section-head center">
+          <span class="kicker">Free to start · Plus to go further</span>
+          <h2>Free and Consecra Plus</h2>
+          <p>Much of Consecra is free, with no account and no ads. Consecra Plus opens everything, as a yearly subscription with a 1-week free trial, a monthly subscription, or a one-time lifetime purchase.</p>
+        </div>
+        <div class="tiers">
+          <div class="tier">
+            <h3>Free</h3>
+            <p class="sub">Always, with no account</p>
+            <ul>
+              <li>The dawn timer with every length, and the Live Activity</li>
+              <li>Your First Fast and Ezra’s Fast in full, and the first days of every journey</li>
+              <li>The full Daniel Fast food guide and label scanner</li>
+              <li>Three recipes and three prayer intentions</li>
+              <li>Your journal and the last 7 days of history</li>
+              <li>One daily prayer reminder</li>
+              <li>Joining any group fast</li>
+            </ul>
+          </div>
+          <div class="tier plus">
+            <span class="badge">Plus</span>
+            <h3>Consecra Plus</h3>
+            <p class="sub">Yearly (1-week free trial), monthly or lifetime</p>
+            <ul>
+              <li>Every day of every journey</li>
+              <li>All recipes and the 7-day meal plan</li>
+              <li>Home Screen and Lock Screen widgets</li>
+              <li>Pray like Daniel: three reminders a day</li>
+              <li>Unlimited prayer intentions</li>
+              <li>Full history, stats and fasting calendar</li>
+              <li>Creating group fasts for your church</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fine">Prices are shown in the App Store and in the app for your country. Subscriptions renew automatically until cancelled; cancel anytime in your Apple Account settings at least 24 hours before renewal.</p>
+      </div>
+      <div data-lang="pt" lang="pt-BR">
+        <div class="section-head center">
+          <span class="kicker">Comece grátis · Vá além com o Plus</span>
+          <h2>Grátis e Consecra Plus</h2>
+          <p>Grande parte do Consecra é gratuita, sem conta e sem anúncios. O Consecra Plus libera tudo, como assinatura anual com 1 semana de teste grátis, assinatura mensal ou compra vitalícia única.</p>
+        </div>
+        <div class="tiers">
+          <div class="tier">
+            <h3>Grátis</h3>
+            <p class="sub">Sempre, sem conta</p>
+            <ul>
+              <li>O cronômetro da aurora com todas as durações e a Atividade ao Vivo</li>
+              <li>“Seu primeiro jejum” e “O Jejum de Esdras” completos, e os primeiros dias de todas as jornadas</li>
+              <li>O guia de alimentos do Jejum de Daniel completo e o leitor de rótulos</li>
+              <li>Três receitas e três pedidos de oração</li>
+              <li>O diário e os últimos 7 dias de histórico</li>
+              <li>Um lembrete de oração por dia</li>
+              <li>Participar de qualquer jejum em grupo</li>
+            </ul>
+          </div>
+          <div class="tier plus">
+            <span class="badge">Plus</span>
+            <h3>Consecra Plus</h3>
+            <p class="sub">Anual (1 semana grátis), mensal ou vitalício</p>
+            <ul>
+              <li>Todos os dias de todas as jornadas</li>
+              <li>Todas as receitas e o cardápio de 7 dias</li>
+              <li>Widgets na Tela de Início e na Tela Bloqueada</li>
+              <li>Orar como Daniel: três lembretes por dia</li>
+              <li>Pedidos de oração ilimitados</li>
+              <li>Histórico completo, estatísticas e calendário de jejuns</li>
+              <li>Criar jejuns em grupo para a sua igreja</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fine">Os preços aparecem na App Store e no app para o seu país. As assinaturas são renovadas automaticamente até serem canceladas; cancele quando quiser nos ajustes da sua Conta Apple, pelo menos 24 horas antes da renovação.</p>
+      </div>
+      <div data-lang="es" lang="es">
+        <div class="section-head center">
+          <span class="kicker">Empieza gratis · Llega más lejos con Plus</span>
+          <h2>Gratis y Consecra Plus</h2>
+          <p>Gran parte de Consecra es gratuita, sin cuenta y sin anuncios. Consecra Plus lo desbloquea todo, como suscripción anual con 1 semana de prueba gratis, suscripción mensual o compra única de por vida.</p>
+        </div>
+        <div class="tiers">
+          <div class="tier">
+            <h3>Gratis</h3>
+            <p class="sub">Siempre, sin cuenta</p>
+            <ul>
+              <li>El temporizador del alba con todas las duraciones y la Actividad en vivo</li>
+              <li>«Tu primer ayuno» y «El ayuno de Esdras» completos, y los primeros días de todos los recorridos</li>
+              <li>La guía de alimentos del Ayuno de Daniel completa y el escáner de etiquetas</li>
+              <li>Tres recetas y tres peticiones de oración</li>
+              <li>Tu diario y los últimos 7 días de historial</li>
+              <li>Un recordatorio de oración al día</li>
+              <li>Unirte a cualquier ayuno en grupo</li>
+            </ul>
+          </div>
+          <div class="tier plus">
+            <span class="badge">Plus</span>
+            <h3>Consecra Plus</h3>
+            <p class="sub">Anual (1 semana gratis), mensual o de por vida</p>
+            <ul>
+              <li>Todos los días de todos los recorridos</li>
+              <li>Todas las recetas y el plan de comidas de 7 días</li>
+              <li>Widgets en la pantalla de inicio y en la pantalla bloqueada</li>
+              <li>Orar como Daniel: tres recordatorios al día</li>
+              <li>Peticiones de oración ilimitadas</li>
+              <li>Historial completo, estadísticas y calendario de ayunos</li>
+              <li>Crear ayunos en grupo para tu iglesia</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fine">Los precios se muestran en el App Store y en la app para tu país. Las suscripciones se renuevan automáticamente hasta que las canceles; cancela cuando quieras en la configuración de tu Cuenta de Apple, al menos 24 horas antes de la renovación.</p>
+      </div>
+      <div data-lang="fr" lang="fr">
+        <div class="section-head center">
+          <span class="kicker">Gratuit pour commencer · Plus pour aller plus loin</span>
+          <h2>Gratuit et Consecra Plus</h2>
+          <p>Une grande partie de Consecra est gratuite, sans compte et sans publicité. Consecra Plus débloque tout, avec un abonnement annuel assorti d’un essai gratuit d’une semaine, un abonnement mensuel ou un achat unique à vie.</p>
+        </div>
+        <div class="tiers">
+          <div class="tier">
+            <h3>Gratuit</h3>
+            <p class="sub">Toujours, sans compte</p>
+            <ul>
+              <li>Le minuteur de l’aube avec toutes les durées, et l’activité en direct</li>
+              <li>«&nbsp;Ton premier jeûne&nbsp;» et «&nbsp;Le jeûne d’Esdras&nbsp;» en entier, et les premiers jours de chaque parcours</li>
+              <li>Le guide alimentaire du jeûne de Daniel complet et le scanner d’étiquettes</li>
+              <li>Trois recettes et trois intentions de prière</li>
+              <li>Ton journal et les 7&nbsp;derniers jours d’historique</li>
+              <li>Un rappel de prière par jour</li>
+              <li>Rejoindre n’importe quel jeûne en groupe</li>
+            </ul>
+          </div>
+          <div class="tier plus">
+            <span class="badge">Plus</span>
+            <h3>Consecra Plus</h3>
+            <p class="sub">Annuel (1&nbsp;semaine gratuite), mensuel ou à vie</p>
+            <ul>
+              <li>Chaque jour de chaque parcours</li>
+              <li>Toutes les recettes et le menu de 7&nbsp;jours</li>
+              <li>Des widgets sur l’écran d’accueil et l’écran verrouillé</li>
+              <li>Prier comme Daniel&nbsp;: trois rappels par jour</li>
+              <li>Des intentions de prière illimitées</li>
+              <li>L’historique complet, les statistiques et le calendrier des jeûnes</li>
+              <li>Créer des jeûnes en groupe pour ton Église</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fine">Les prix sont affichés dans l’App Store et dans l’app pour ton pays. Les abonnements se renouvellent automatiquement jusqu’à leur résiliation&nbsp;; résilie quand tu veux dans les réglages de ton compte Apple, au moins 24&nbsp;heures avant le renouvellement.</p>
+      </div>
+    </section>
+
+    <!-- =============================================================== PRIVACY VOW -->
+    <section class="vow">
+      <div class="wrap">
+        <div data-lang="en" lang="en">
+          <span class="kicker">Private by design</span>
+          <p class="big">No ads. No tracking. No account.<br><span class="em">Your prayers stay on your iPhone.</span></p>
+          <p class="small">Consecra has no server and collects no data — its App Store privacy label reads “Data Not Collected.” Read the <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+        <div data-lang="pt" lang="pt-BR">
+          <span class="kicker">Privado por concepção</span>
+          <p class="big">Sem anúncios. Sem rastreamento. Sem conta.<br><span class="em">Suas orações ficam no seu iPhone.</span></p>
+          <p class="small">O Consecra não tem servidor e não coleta dados — o rótulo de privacidade na App Store diz “Dados não coletados”. Leia a <a href="privacy.html">Política de Privacidade</a>.</p>
+        </div>
+        <div data-lang="es" lang="es">
+          <span class="kicker">Privado por diseño</span>
+          <p class="big">Sin anuncios. Sin rastreo. Sin cuenta.<br><span class="em">Tus oraciones se quedan en tu iPhone.</span></p>
+          <p class="small">Consecra no tiene servidor y no recopila datos: su etiqueta de privacidad en el App Store dice «Datos no recopilados». Lee la <a href="privacy.html">Política de Privacidad</a>.</p>
+        </div>
+        <div data-lang="fr" lang="fr">
+          <span class="kicker">Confidentiel par conception</span>
+          <p class="big">Sans publicité. Sans suivi. Sans compte.<br><span class="em">Tes prières restent sur ton iPhone.</span></p>
+          <p class="small">Consecra n’a pas de serveur et ne collecte aucune donnée&nbsp;: son étiquette de confidentialité sur l’App Store indique «&nbsp;Données non collectées&nbsp;». Lis la <a href="privacy.html">Politique de confidentialité</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================== FAQ -->
+    <section class="block wrap narrow" id="faq">
+      <div data-lang="en" lang="en">
+        <div class="section-head center">
+          <span class="kicker">Help</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>How does the fast timer work?</summary>
+            <div class="answer">
+              <p>On the <strong>Today</strong> tab, tap <strong>Begin a fast</strong>. Choose the kind of fast (water, Daniel, juice, one meal, sunrise to sunset, media or your own), then a length from 12 to 72 hours, a custom number of hours, or a time to end. You can add what you are fasting for. As the hours pass, the sun climbs and the sky turns from night to dawn.</p>
+              <p>The timer counts from the moment you began, so it keeps going if you close the app or restart your iPhone. Optional notifications tell you when you are halfway, when one hour is left and when your fast is complete. When you end it, you can add a short reflection that is saved to your history.</p>
+              <p><strong>Live Activity:</strong> while a fast runs, its countdown shows on your Lock Screen and in the Dynamic Island on iPhones that have one. It updates by itself, with no internet connection. If it doesn’t appear, check iOS Settings › Consecra › Live Activities. Your intention appears there too, so leave it blank if you’d rather keep it private.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I start a journey, and what does “today” mean?</summary>
+            <div class="answer">
+              <p>Open the <strong>Journeys</strong> tab, choose a journey and tap <strong>Begin this journey</strong>. Pick a start date — today or a later day, such as the day your church begins — and, if you are fasting with others, add your church or group name.</p>
+              <p><strong>Day 1 is your start date.</strong> Each new day opens at midnight by your iPhone’s calendar, so “today” is always the day where you are, even when you travel. Past days stay open to read again; future days unlock on their date, and you can see their titles ahead of time. The Wednesday &amp; Friday Fast follows the week instead: a new reflection opens each Wednesday and Friday.</p>
+              <p>Each day you can tap <strong>I kept today’s fast</strong>. If you miss a day, nothing is lost — read it when you can.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do group fasts work?</summary>
+            <div class="answer">
+              <p>A group fast is a journey that several people begin on the same date. To create one, begin the journey, tap the ••• menu at the top of the journey, choose <strong>Fast together</strong>, then share the invitation link or show its QR code. Creating group fasts is part of Consecra Plus.</p>
+              <p><strong>Joining is free.</strong> On an iPhone with Consecra installed, open the link, tap <strong>Open in Consecra</strong>, then <strong>Join the fast</strong>: the journey is added with the same start date. Don’t have the app yet? The invitation page links to the App Store; after installing, open the link again.</p>
+              <p>There are no accounts and no server. The link itself carries the journey, the start date and the group name, so Consecra never knows who joined, and no one can see anyone else’s progress, journal or prayers.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How does the label scanner work, and what are its limits?</summary>
+            <div class="answer">
+              <p>In the <strong>Food</strong> tab, tap <strong>Scan a label</strong>. Take a photo of the ingredient list, choose a photo you already have, or paste the ingredients as text. Consecra reads the words on your iPhone and shows whether the product looks Daniel Fast–friendly, listing any ingredient the fast leaves out.</p>
+              <ul>
+                <li>Glare, curved packaging, tiny print and handwriting can cause missed or misread words. Fill the frame with the ingredients, in good light.</li>
+                <li>It recognizes ingredient names in English, Portuguese, Spanish and French. It can’t know how a product was made, or anything not printed on the label.</li>
+                <li>Daniel Fast traditions differ on some items (vinegar, plant milks, nut butters…). Follow the guidelines your church or group is using.</li>
+                <li>It is not an allergy or medical tool. Always read the label yourself.</li>
+              </ul>
+              <p>Text recognition happens on your iPhone, even offline. Photos are never stored or sent anywhere.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I manage, cancel or restore my subscription? How does the free trial work?</summary>
+            <div class="answer">
+              <p>Subscriptions are handled by Apple. To manage or cancel, open iPhone <strong>Settings › [your name] › Subscriptions</strong>, or in Consecra go to <strong>Settings › Manage subscription</strong>. Cancel at least 24 hours before the renewal date to avoid the next charge; Plus stays active until the end of the period you paid for. Deleting the app does not cancel a subscription.</p>
+              <p><strong>Free trial:</strong> the yearly plan includes a 1-week free trial for eligible new subscribers. Consecra can remind you two days before it ends. Cancel at least 24 hours before the trial ends and you won’t be charged.</p>
+              <p><strong>Restore:</strong> on a new iPhone or after reinstalling, open <strong>Settings</strong> in Consecra and tap <strong>Restore purchases</strong> while signed in with the same Apple Account. Active subscriptions and the lifetime purchase come back; Family Sharing works as Apple configures it.</p>
+              <p>Prices are shown in the App Store and in the app for your country. For refunds, use Apple’s <a href="https://reportaproblem.apple.com/">Report a Problem</a> page.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I change the language?</summary>
+            <div class="answer">
+              <p>Consecra speaks English, Português (Brasil), Español and Français, and follows your iPhone’s language by default. To choose another, open <strong>Settings › Language</strong> in Consecra. The app switches right away — devotionals, food guide and Bible included. Choose <strong>System</strong> to follow your iPhone again.</p>
+              <p>Each language reads from its own public-domain Bible: the World English Bible Updated, the Bíblia Portuguesa Mundial, the Reina-Valera 1909 and the Louis Segond 1910. On this website, use the EN · PT · ES · FR tabs at the top.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is fasting safe for me?</summary>
+            <div class="answer">
+              <p>Consecra offers spiritual guidance, not medical advice. Talk to your doctor before fasting, especially if you:</p>
+              <ul>
+                <li>are pregnant or nursing</li>
+                <li>have diabetes</li>
+                <li>have a history of an eating disorder</li>
+                <li>are under 18</li>
+                <li>have a heart or kidney condition</li>
+                <li>take medication that must be taken with food</li>
+              </ul>
+              <p>If you tell the app’s health check that any of these apply, Consecra suggests the Daniel Fast and other gentler or shorter fasts, and does not offer water fasts longer than 24 hours. No one is offered a fast longer than 72 hours. You can change your answers anytime in <strong>Settings › Health check</strong>, and <strong>Settings › Fasting and your health</strong> explains more, with sources.</p>
+              <p>Drink water, break a fast gently, and stop and seek help if you feel faint, confused or unwell. A fast of the heart — from media, from a meal, from one food — honors God too.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What happens to my data?</summary>
+            <div class="answer">
+              <p>It stays on your iPhone. Your fasts, journeys, prayer intentions, journal and health-check answers are stored on the device; there is no account, no server, no analytics and no ads, and the App Store privacy label reads “Data Not Collected.” The camera is used only for label photos, which are read on your iPhone and never stored or sent.</p>
+              <p>Because nothing is synced, deleting Consecra deletes its data. Your iPhone’s own backup (iCloud Backup or a computer) normally includes it, so restoring that backup brings it back. Read the full <a href="privacy.html">Privacy Policy</a>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I contact you?</summary>
+            <div class="answer">
+              <p>Email <a href="mailto:braniapps@gmail.com?subject=Consecra%20support">braniapps@gmail.com</a>. Questions, corrections to a devotional or the food guide, and ideas are all welcome. It helps to include your iPhone model, iOS version and the Consecra version, shown at the bottom of Settings in the app.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div data-lang="pt" lang="pt-BR">
+        <div class="section-head center">
+          <span class="kicker">Ajuda</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Como funciona o cronômetro de jejum?</summary>
+            <div class="answer">
+              <p>Na aba <strong>Hoje</strong>, toque em <strong>Começar um jejum</strong>. Escolha o tipo de jejum (água, Daniel, sucos, uma refeição, do nascer ao pôr do sol, mídias ou o seu próprio) e depois uma duração de 12 a 72 horas, um número de horas personalizado ou um horário para terminar. Você pode escrever o motivo do seu jejum. Conforme as horas passam, o sol sobe e o céu passa da noite à aurora.</p>
+              <p>O cronômetro conta a partir do momento em que você começou, então continua mesmo se você fechar o app ou reiniciar o iPhone. Notificações opcionais avisam quando você chega à metade, quando falta uma hora e quando o jejum termina. Ao encerrar, você pode adicionar uma breve reflexão, que fica salva no seu histórico.</p>
+              <p><strong>Atividade ao Vivo:</strong> enquanto o jejum está em andamento, a contagem regressiva aparece na Tela Bloqueada e na Dynamic Island, nos iPhones que a têm. Ela se atualiza sozinha, sem internet. Se não aparecer, verifique Ajustes do iOS › Consecra › Atividades ao Vivo. O motivo do jejum também aparece ali; deixe-o em branco se preferir mantê-lo em particular.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Como começo uma jornada e o que significa “hoje”?</summary>
+            <div class="answer">
+              <p>Abra a aba <strong>Jornadas</strong>, escolha uma jornada e toque em <strong>Começar esta jornada</strong>. Escolha a data de início — hoje ou um dia mais à frente, como o dia em que a sua igreja começa — e, se for jejuar com outras pessoas, adicione o nome da sua igreja ou grupo.</p>
+              <p><strong>O dia 1 é a sua data de início.</strong> Cada novo dia se abre à meia-noite, pelo calendário do seu iPhone, então “hoje” é sempre o dia onde você está, mesmo em viagem. Os dias passados continuam disponíveis para reler; os dias futuros se abrem na sua data, e você já pode ver os títulos. O “Jejum às quartas e sextas” segue a semana: uma nova reflexão se abre a cada quarta e sexta-feira.</p>
+              <p>A cada dia, você pode tocar em <strong>Cumpri o jejum de hoje</strong>. Se pular um dia, não há problema — leia quando puder.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Como funcionam os jejuns em grupo?</summary>
+            <div class="answer">
+              <p>Um jejum em grupo é uma jornada que várias pessoas começam na mesma data. Para criar um, comece a jornada, toque no menu ••• no alto da jornada, escolha <strong>Jejuar juntos</strong> e compartilhe o link do convite ou mostre o QR code. Criar jejuns em grupo faz parte do Consecra Plus.</p>
+              <p><strong>Participar é grátis.</strong> Num iPhone com o Consecra instalado, abra o link, toque em <strong>Abrir no Consecra</strong> e depois em <strong>Entrar no jejum</strong>: a jornada é adicionada com a mesma data de início. Ainda não tem o app? A página do convite leva à App Store; depois de instalar, abra o link de novo.</p>
+              <p>Não há contas nem servidor. O próprio link leva a jornada, a data de início e o nome do grupo, então o Consecra nunca sabe quem entrou, e ninguém vê o progresso, o diário ou as orações de outra pessoa.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Como funciona o leitor de rótulos e quais são os limites dele?</summary>
+            <div class="answer">
+              <p>Na aba <strong>Alimentos</strong>, toque em <strong>Escanear um rótulo</strong>. Tire uma foto da lista de ingredientes, escolha uma foto que você já tem ou cole os ingredientes como texto. O Consecra lê as palavras no seu iPhone e mostra se o produto parece adequado ao Jejum de Daniel, listando os ingredientes que o jejum deixa de fora.</p>
+              <ul>
+                <li>Reflexos, embalagens curvas, letras muito pequenas e textos escritos à mão podem fazer o leitor perder ou confundir palavras. Enquadre bem os ingredientes, com boa luz.</li>
+                <li>Ele reconhece nomes de ingredientes em inglês, português, espanhol e francês. Não tem como saber como o produto foi feito nem o que não está impresso no rótulo.</li>
+                <li>As tradições do Jejum de Daniel diferem em alguns itens (vinagre, leites vegetais, pastas de oleaginosas…). Siga as orientações da sua igreja ou do seu grupo.</li>
+                <li>Não é uma ferramenta para alergias nem para uso médico. Leia sempre o rótulo você mesmo.</li>
+              </ul>
+              <p>O reconhecimento de texto acontece no seu iPhone, mesmo offline. As fotos nunca são guardadas nem enviadas.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Como gerencio, cancelo ou restauro minha assinatura? Como funciona o teste grátis?</summary>
+            <div class="answer">
+              <p>As assinaturas são administradas pela Apple. Para gerenciar ou cancelar, abra <strong>Ajustes › [seu nome] › Assinaturas</strong> no iPhone ou, no Consecra, vá em <strong>Ajustes › Gerenciar assinatura</strong>. Cancele pelo menos 24 horas antes da data de renovação para evitar a próxima cobrança; o Plus continua ativo até o fim do período pago. Apagar o app não cancela a assinatura.</p>
+              <p><strong>Teste grátis:</strong> o plano anual inclui 1 semana de teste grátis para novos assinantes elegíveis. O Consecra pode lembrar você dois dias antes do fim. Cancele pelo menos 24 horas antes do fim do teste e você não será cobrado.</p>
+              <p><strong>Restaurar:</strong> num iPhone novo ou depois de reinstalar, abra <strong>Ajustes</strong> no Consecra e toque em <strong>Restaurar compras</strong>, com a mesma Conta Apple. As assinaturas ativas e a compra vitalícia voltam; o Compartilhamento Familiar funciona conforme a configuração da Apple.</p>
+              <p>Os preços aparecem na App Store e no app para o seu país. Para reembolsos, use a página <a href="https://reportaproblem.apple.com/">Relatar um Problema</a> da Apple.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Como mudo o idioma?</summary>
+            <div class="answer">
+              <p>O Consecra fala English, Português (Brasil), Español e Français e, por padrão, segue o idioma do seu iPhone. Para escolher outro, abra <strong>Ajustes › Idioma</strong> no Consecra. O app muda na hora — devocionais, guia de alimentos e Bíblia incluídos. Escolha <strong>Sistema</strong> para voltar a seguir o iPhone.</p>
+              <p>Cada idioma usa a sua própria Bíblia em domínio público: World English Bible Updated, Bíblia Portuguesa Mundial, Reina-Valera 1909 e Louis Segond 1910. Neste site, use as abas EN · PT · ES · FR no alto da página.</p>
+            </div>
+          </details>
+          <details>
+            <summary>O jejum é seguro para mim?</summary>
+            <div class="answer">
+              <p>O Consecra oferece orientação espiritual, não aconselhamento médico. Converse com o seu médico antes de jejuar, principalmente se você:</p>
+              <ul>
+                <li>está grávida ou amamentando</li>
+                <li>tem diabetes</li>
+                <li>tem histórico de transtorno alimentar</li>
+                <li>tem menos de 18 anos</li>
+                <li>tem uma doença cardíaca ou renal</li>
+                <li>toma remédios que precisam ser tomados com comida</li>
+              </ul>
+              <p>Se você indicar no check-up de saúde do app que algum desses casos se aplica, o Consecra sugere o Jejum de Daniel e outros jejuns mais leves ou mais curtos, e não oferece jejuns só com água de mais de 24 horas. Ninguém recebe a opção de um jejum de mais de 72 horas. Você pode mudar suas respostas quando quiser em <strong>Ajustes › Check-up de saúde</strong>, e <strong>Ajustes › O jejum e sua saúde</strong> explica mais, com fontes.</p>
+              <p>Beba água, quebre o jejum com calma e pare e procure ajuda se sentir fraqueza, confusão ou mal-estar. Um jejum do coração — de mídias, de uma refeição, de um alimento — também honra a Deus.</p>
+            </div>
+          </details>
+          <details>
+            <summary>O que acontece com os meus dados?</summary>
+            <div class="answer">
+              <p>Eles ficam no seu iPhone. Seus jejuns, jornadas, pedidos de oração, diário e respostas do check-up de saúde são guardados no aparelho; não há conta, servidor, análises de uso nem anúncios, e o rótulo de privacidade na App Store diz “Dados não coletados”. A câmera é usada só para fotos de rótulos, que são lidas no seu iPhone e nunca guardadas nem enviadas.</p>
+              <p>Como nada é sincronizado, apagar o Consecra apaga os dados dele. O backup do próprio iPhone (Backup do iCloud ou computador) normalmente os inclui, então restaurar esse backup os traz de volta. Leia a <a href="privacy.html">Política de Privacidade</a> completa.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Como entro em contato?</summary>
+            <div class="answer">
+              <p>Escreva para <a href="mailto:braniapps@gmail.com?subject=Consecra%20support">braniapps@gmail.com</a>. Perguntas, correções num devocional ou no guia de alimentos e ideias são todas bem-vindas. Ajuda informar o modelo do iPhone, a versão do iOS e a versão do Consecra, que aparece no fim dos Ajustes do app.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div data-lang="es" lang="es">
+        <div class="section-head center">
+          <span class="kicker">Ayuda</span>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>¿Cómo funciona el temporizador de ayuno?</summary>
+            <div class="answer">
+              <p>En la pestaña <strong>Hoy</strong>, toca <strong>Comenzar un ayuno</strong>. Elige el tipo de ayuno (agua, Daniel, jugos, una comida, del amanecer al atardecer, digital o el tuyo propio) y luego una duración de 12 a 72 horas, un número de horas personalizado o una hora para terminar. Puedes escribir por qué ayunas. Con el paso de las horas, el sol sube y el cielo pasa de la noche al alba.</p>
+              <p>El temporizador cuenta desde el momento en que empezaste, así que sigue aunque cierres la app o reinicies el iPhone. Notificaciones opcionales te avisan a la mitad, cuando falta una hora y cuando el ayuno termina. Al terminarlo, puedes añadir una breve reflexión que se guarda en tu historial.</p>
+              <p><strong>Actividad en vivo:</strong> mientras un ayuno está en curso, la cuenta regresiva aparece en la pantalla bloqueada y en la Dynamic Island de los iPhone que la tienen. Se actualiza sola, sin conexión a internet. Si no aparece, revisa Configuración de iOS › Consecra › Actividades en vivo. El motivo de tu ayuno también se muestra ahí; déjalo en blanco si prefieres mantenerlo en privado.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo empiezo un recorrido y qué significa «hoy»?</summary>
+            <div class="answer">
+              <p>Abre la pestaña <strong>Recorridos</strong>, elige uno y toca <strong>Comenzar este recorrido</strong>. Elige la fecha de inicio —hoy o un día posterior, como el día en que empieza tu iglesia— y, si ayunas con otros, añade el nombre de tu iglesia o grupo.</p>
+              <p><strong>El día 1 es tu fecha de inicio.</strong> Cada nuevo día se abre a medianoche según el calendario de tu iPhone, así que «hoy» siempre es el día donde estás, incluso de viaje. Los días pasados siguen disponibles para releer; los futuros se abren en su fecha, y ya puedes ver sus títulos. El «Ayuno de miércoles y viernes» sigue la semana: se abre una nueva reflexión cada miércoles y cada viernes.</p>
+              <p>Cada día puedes tocar <strong>Cumplí el ayuno de hoy</strong>. Si te saltas un día, no pasa nada: léelo cuando puedas.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo funcionan los ayunos en grupo?</summary>
+            <div class="answer">
+              <p>Un ayuno en grupo es un recorrido que varias personas empiezan en la misma fecha. Para crear uno, comienza el recorrido, toca el menú ••• en la parte superior, elige <strong>Ayunar juntos</strong> y comparte el enlace de invitación o muestra su código QR. Crear ayunos en grupo forma parte de Consecra Plus.</p>
+              <p><strong>Unirse es gratis.</strong> En un iPhone con Consecra instalado, abre el enlace, toca <strong>Abrir en Consecra</strong> y luego <strong>Unirme al ayuno</strong>: el recorrido se añade con la misma fecha de inicio. ¿Aún no tienes la app? La página de la invitación lleva al App Store; después de instalarla, abre el enlace otra vez.</p>
+              <p>No hay cuentas ni servidor. El propio enlace lleva el recorrido, la fecha de inicio y el nombre del grupo, así que Consecra nunca sabe quién se unió, y nadie ve el progreso, el diario ni las oraciones de otra persona.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo funciona el escáner de etiquetas y cuáles son sus límites?</summary>
+            <div class="answer">
+              <p>En la pestaña <strong>Alimentos</strong>, toca <strong>Escanear una etiqueta</strong>. Toma una foto de la lista de ingredientes, elige una foto que ya tengas o pega los ingredientes como texto. Consecra lee las palabras en tu iPhone y te muestra si el producto parece apto para el Ayuno de Daniel, con la lista de ingredientes que el ayuno deja fuera.</p>
+              <ul>
+                <li>Los reflejos, los empaques curvos, la letra muy pequeña y la escritura a mano pueden hacer que se pierdan o se lean mal algunas palabras. Encuadra bien los ingredientes, con buena luz.</li>
+                <li>Reconoce nombres de ingredientes en inglés, portugués, español y francés. No puede saber cómo se elaboró un producto ni lo que no está impreso en la etiqueta.</li>
+                <li>Las tradiciones del Ayuno de Daniel difieren en algunos productos (vinagre, bebidas vegetales, cremas de frutos secos…). Sigue las pautas de tu iglesia o grupo.</li>
+                <li>No es una herramienta para alergias ni para uso médico. Lee siempre la etiqueta tú mismo.</li>
+              </ul>
+              <p>El reconocimiento de texto se hace en tu iPhone, incluso sin conexión. Las fotos nunca se guardan ni se envían.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo administro, cancelo o restauro mi suscripción? ¿Cómo funciona la prueba gratis?</summary>
+            <div class="answer">
+              <p>Apple gestiona las suscripciones. Para administrarla o cancelarla, abre <strong>Configuración › [tu nombre] › Suscripciones</strong> en el iPhone, o en Consecra ve a <strong>Ajustes › Administrar suscripción</strong>. Cancela al menos 24 horas antes de la fecha de renovación para evitar el siguiente cobro; Plus sigue activo hasta el final del período pagado. Eliminar la app no cancela la suscripción.</p>
+              <p><strong>Prueba gratis:</strong> el plan anual incluye 1 semana de prueba gratis para nuevos suscriptores elegibles. Consecra puede recordártelo dos días antes de que termine. Cancela al menos 24 horas antes del final de la prueba y no se te cobrará.</p>
+              <p><strong>Restaurar:</strong> en un iPhone nuevo o tras reinstalar, abre <strong>Ajustes</strong> en Consecra y toca <strong>Restaurar compras</strong>, con la misma Cuenta de Apple. Las suscripciones activas y la compra de por vida vuelven; En Familia funciona según lo configure Apple.</p>
+              <p>Los precios se muestran en el App Store y en la app para tu país. Para reembolsos, usa la página <a href="https://reportaproblem.apple.com/">Reportar un problema</a> de Apple.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo cambio el idioma?</summary>
+            <div class="answer">
+              <p>Consecra habla English, Português (Brasil), Español y Français y, de forma predeterminada, sigue el idioma de tu iPhone. Para elegir otro, abre <strong>Ajustes › Idioma</strong> en Consecra. La app cambia al instante, con los devocionales, la guía de alimentos y la Biblia. Elige <strong>Sistema</strong> para volver a seguir al iPhone.</p>
+              <p>Cada idioma usa su propia Biblia de dominio público: World English Bible Updated, Bíblia Portuguesa Mundial, Reina-Valera 1909 y Louis Segond 1910. En este sitio, usa las pestañas EN · PT · ES · FR de arriba.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Es seguro que yo ayune?</summary>
+            <div class="answer">
+              <p>Consecra ofrece orientación espiritual, no consejo médico. Habla con tu médico antes de ayunar, sobre todo si:</p>
+              <ul>
+                <li>estás embarazada o amamantando</li>
+                <li>tienes diabetes</li>
+                <li>tienes antecedentes de un trastorno alimentario</li>
+                <li>tienes menos de 18 años</li>
+                <li>tienes una afección cardíaca o renal</li>
+                <li>tomas medicamentos que deben tomarse con comida</li>
+              </ul>
+              <p>Si indicas en el chequeo de salud de la app que alguno de estos casos se aplica, Consecra te sugiere el Ayuno de Daniel y otros ayunos más suaves o más cortos, y no ofrece ayunos solo con agua de más de 24 horas. A nadie se le ofrece un ayuno de más de 72 horas. Puedes cambiar tus respuestas cuando quieras en <strong>Ajustes › Chequeo de salud</strong>, y <strong>Ajustes › El ayuno y tu salud</strong> explica más, con fuentes.</p>
+              <p>Toma agua, rompe el ayuno con suavidad, y detente y busca ayuda si te sientes débil, confundido o mal. Un ayuno del corazón —de las redes, de una comida, de un alimento— también honra a Dios.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Qué pasa con mis datos?</summary>
+            <div class="answer">
+              <p>Se quedan en tu iPhone. Tus ayunos, recorridos, peticiones de oración, diario y respuestas del chequeo de salud se guardan en el dispositivo; no hay cuenta, servidor, analíticas ni anuncios, y la etiqueta de privacidad del App Store dice «Datos no recopilados». La cámara se usa solo para fotos de etiquetas, que se leen en tu iPhone y nunca se guardan ni se envían.</p>
+              <p>Como nada se sincroniza, eliminar Consecra elimina sus datos. El respaldo de tu propio iPhone (respaldo en iCloud o en una computadora) normalmente los incluye, así que restaurarlo los recupera. Lee la <a href="privacy.html">Política de Privacidad</a> completa.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo me pongo en contacto?</summary>
+            <div class="answer">
+              <p>Escribe a <a href="mailto:braniapps@gmail.com?subject=Consecra%20support">braniapps@gmail.com</a>. Preguntas, correcciones a un devocional o a la guía de alimentos e ideas son bienvenidas. Ayuda incluir el modelo de tu iPhone, la versión de iOS y la versión de Consecra, que aparece al final de Ajustes en la app.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div data-lang="fr" lang="fr">
+        <div class="section-head center">
+          <span class="kicker">Aide</span>
+          <h2>Questions fréquentes</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Comment fonctionne le minuteur de jeûne&nbsp;?</summary>
+            <div class="answer">
+              <p>Dans l’onglet <strong>Aujourd’hui</strong>, touche <strong>Commencer un jeûne</strong>. Choisis le type de jeûne (eau, Daniel, jus, un seul repas, du lever au coucher du soleil, écrans ou le tien), puis une durée de 12 à 72&nbsp;heures, un nombre d’heures personnalisé ou une heure de fin. Tu peux écrire pour quoi tu jeûnes. À mesure que les heures passent, le soleil monte et le ciel passe de la nuit à l’aube.</p>
+              <p>Le minuteur compte à partir du moment où tu as commencé&nbsp;: il continue même si tu fermes l’app ou redémarres ton iPhone. Des notifications facultatives te préviennent à mi-parcours, quand il reste une heure et quand ton jeûne est terminé. Quand tu y mets fin, tu peux ajouter une courte réflexion, enregistrée dans ton historique.</p>
+              <p><strong>Activité en direct&nbsp;:</strong> pendant un jeûne, le compte à rebours s’affiche sur l’écran verrouillé et dans la Dynamic Island des iPhone qui en ont une. Il se met à jour tout seul, sans connexion. S’il n’apparaît pas, vérifie Réglages d’iOS › Consecra › Activités en direct. Ton intention s’y affiche aussi&nbsp;; laisse-la vide si tu préfères la garder pour toi.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Comment commencer un parcours, et que veut dire «&nbsp;aujourd’hui&nbsp;»&nbsp;?</summary>
+            <div class="answer">
+              <p>Ouvre l’onglet <strong>Parcours</strong>, choisis un parcours et touche <strong>Commencer ce parcours</strong>. Choisis la date de début — aujourd’hui ou un jour suivant, par exemple le jour où ton Église commence — et, si tu jeûnes avec d’autres, ajoute le nom de ton Église ou de ton groupe.</p>
+              <p><strong>Le jour&nbsp;1 est ta date de début.</strong> Chaque nouveau jour s’ouvre à minuit selon le calendrier de ton iPhone&nbsp;: «&nbsp;aujourd’hui&nbsp;» est donc toujours le jour là où tu es, même en voyage. Les jours passés restent ouverts pour être relus&nbsp;; les jours à venir s’ouvrent à leur date, et tu peux déjà voir leurs titres. Le «&nbsp;Jeûne du mercredi et du vendredi&nbsp;» suit la semaine&nbsp;: une nouvelle réflexion s’ouvre chaque mercredi et chaque vendredi.</p>
+              <p>Chaque jour, tu peux toucher <strong>J’ai tenu le jeûne d’aujourd’hui</strong>. Si tu manques un jour, ce n’est pas grave&nbsp;: lis-le quand tu peux.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Comment fonctionnent les jeûnes en groupe&nbsp;?</summary>
+            <div class="answer">
+              <p>Un jeûne en groupe est un parcours que plusieurs personnes commencent à la même date. Pour en créer un, commence le parcours, touche le menu ••• en haut du parcours, choisis <strong>Jeûner ensemble</strong>, puis partage le lien d’invitation ou affiche son QR code. La création de jeûnes en groupe fait partie de Consecra Plus.</p>
+              <p><strong>Rejoindre est gratuit.</strong> Sur un iPhone où Consecra est installé, ouvre le lien, touche <strong>Ouvrir dans Consecra</strong>, puis <strong>Rejoindre le jeûne</strong>&nbsp;: le parcours est ajouté avec la même date de début. Tu n’as pas encore l’app&nbsp;? La page d’invitation mène à l’App Store&nbsp;; après l’installation, rouvre le lien.</p>
+              <p>Il n’y a ni compte ni serveur. Le lien lui-même contient le parcours, la date de début et le nom du groupe&nbsp;: Consecra ne sait jamais qui a rejoint, et personne ne voit la progression, le journal ou les prières d’un autre.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Comment fonctionne le scanner d’étiquettes, et quelles sont ses limites&nbsp;?</summary>
+            <div class="answer">
+              <p>Dans l’onglet <strong>Alimentation</strong>, touche <strong>Scanner une étiquette</strong>. Prends en photo la liste des ingrédients, choisis une photo que tu as déjà ou colle les ingrédients sous forme de texte. Consecra lit les mots sur ton iPhone et t’indique si le produit semble convenir au jeûne de Daniel, avec la liste des ingrédients que le jeûne laisse de côté.</p>
+              <ul>
+                <li>Les reflets, les emballages courbes, les très petits caractères et l’écriture manuscrite peuvent faire manquer ou mal lire des mots. Cadre bien les ingrédients, avec une bonne lumière.</li>
+                <li>Il reconnaît les noms d’ingrédients en anglais, en portugais, en espagnol et en français. Il ne peut pas savoir comment un produit a été fabriqué, ni ce qui n’est pas imprimé sur l’étiquette.</li>
+                <li>Les traditions du jeûne de Daniel diffèrent pour certains produits (vinaigre, laits végétaux, purées d’oléagineux…). Suis les consignes de ton Église ou de ton groupe.</li>
+                <li>Ce n’est ni un outil pour les allergies ni un outil médical. Lis toujours l’étiquette toi-même.</li>
+              </ul>
+              <p>La reconnaissance du texte se fait sur ton iPhone, même hors ligne. Les photos ne sont jamais conservées ni envoyées.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Comment gérer, résilier ou restaurer mon abonnement&nbsp;? Comment fonctionne l’essai gratuit&nbsp;?</summary>
+            <div class="answer">
+              <p>Les abonnements sont gérés par Apple. Pour gérer ou résilier, ouvre <strong>Réglages › [ton nom] › Abonnements</strong> sur l’iPhone ou, dans Consecra, va dans <strong>Réglages › Gérer l’abonnement</strong>. Résilie au moins 24&nbsp;heures avant la date de renouvellement pour éviter le prochain prélèvement&nbsp;; Plus reste actif jusqu’à la fin de la période payée. Supprimer l’app ne résilie pas l’abonnement.</p>
+              <p><strong>Essai gratuit&nbsp;:</strong> la formule annuelle comprend un essai gratuit d’une semaine pour les nouveaux abonnés admissibles. Consecra peut te le rappeler deux jours avant la fin. Résilie au moins 24&nbsp;heures avant la fin de l’essai et rien ne te sera facturé.</p>
+              <p><strong>Restaurer&nbsp;:</strong> sur un nouvel iPhone ou après une réinstallation, ouvre <strong>Réglages</strong> dans Consecra et touche <strong>Restaurer les achats</strong>, connecté avec le même compte Apple. Les abonnements actifs et l’achat à vie reviennent&nbsp;; le partage familial fonctionne selon la configuration d’Apple.</p>
+              <p>Les prix sont affichés dans l’App Store et dans l’app pour ton pays. Pour un remboursement, utilise la page <a href="https://reportaproblem.apple.com/">Signaler un problème</a> d’Apple.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Comment changer de langue&nbsp;?</summary>
+            <div class="answer">
+              <p>Consecra parle English, Português (Brasil), Español et Français, et suit par défaut la langue de ton iPhone. Pour en choisir une autre, ouvre <strong>Réglages › Langue</strong> dans Consecra. L’app change aussitôt — méditations, guide alimentaire et Bible compris. Choisis <strong>Système</strong> pour suivre à nouveau ton iPhone.</p>
+              <p>Chaque langue a sa propre Bible du domaine public&nbsp;: World English Bible Updated, Bíblia Portuguesa Mundial, Reina-Valera 1909 et Louis Segond 1910. Sur ce site, utilise les onglets EN · PT · ES · FR en haut de la page.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Le jeûne est-il sans danger pour moi&nbsp;?</summary>
+            <div class="answer">
+              <p>Consecra offre un accompagnement spirituel, pas un avis médical. Parle à ton médecin avant de jeûner, surtout si tu&nbsp;:</p>
+              <ul>
+                <li>es enceinte ou allaites</li>
+                <li>as du diabète</li>
+                <li>as des antécédents de trouble alimentaire</li>
+                <li>as moins de 18&nbsp;ans</li>
+                <li>as une maladie cardiaque ou rénale</li>
+                <li>prends un médicament qui doit être pris avec de la nourriture</li>
+              </ul>
+              <p>Si tu indiques au questionnaire santé de l’app que l’un de ces cas s’applique, Consecra te propose le jeûne de Daniel et d’autres jeûnes plus doux ou plus courts, et ne propose pas de jeûne à l’eau de plus de 24&nbsp;heures. Aucun jeûne de plus de 72&nbsp;heures n’est proposé à personne. Tu peux modifier tes réponses à tout moment dans <strong>Réglages › Questionnaire santé</strong>, et <strong>Réglages › Le jeûne et ta santé</strong> en dit plus, avec des sources.</p>
+              <p>Bois de l’eau, romps le jeûne en douceur, et arrête-toi et demande de l’aide si tu te sens faible, confus ou mal. Un jeûne du cœur — des écrans, d’un repas, d’un aliment — honore Dieu lui aussi.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Que deviennent mes données&nbsp;?</summary>
+            <div class="answer">
+              <p>Elles restent sur ton iPhone. Tes jeûnes, parcours, intentions de prière, journal et réponses au questionnaire santé sont enregistrés sur l’appareil&nbsp;; il n’y a ni compte, ni serveur, ni outil d’analyse, ni publicité, et l’étiquette de confidentialité de l’App Store indique «&nbsp;Données non collectées&nbsp;». L’appareil photo ne sert qu’aux photos d’étiquettes, lues sur ton iPhone et jamais conservées ni envoyées.</p>
+              <p>Comme rien n’est synchronisé, supprimer Consecra supprime ses données. La sauvegarde de ton iPhone (sauvegarde iCloud ou ordinateur) les inclut normalement&nbsp;: restaurer cette sauvegarde les fait revenir. Lis la <a href="privacy.html">Politique de confidentialité</a> complète.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Comment nous contacter&nbsp;?</summary>
+            <div class="answer">
+              <p>Écris à <a href="mailto:braniapps@gmail.com?subject=Consecra%20support">braniapps@gmail.com</a>. Questions, corrections d’une méditation ou du guide alimentaire, et idées sont les bienvenues. Indique si possible le modèle de ton iPhone, la version d’iOS et la version de Consecra, affichée en bas des Réglages de l’app.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================== CONTACT -->
+    <section class="block wrap narrow" id="contact">
+      <div data-lang="en" lang="en">
+        <div class="contact-card">
+          <span class="kicker">Contact &amp; support</span>
+          <h2>We’d love to hear from you</h2>
+          <p>Questions, corrections and ideas are all welcome. Consecra is made by Paulo Branicio, an independent developer.</p>
+          <a class="btn btn-primary" href="mailto:braniapps@gmail.com?subject=Consecra%20support"><svg aria-hidden="true"><use href="#i-mail"/></svg>Email support</a>
+          <span class="addr">braniapps@gmail.com</span>
+        </div>
+      </div>
+      <div data-lang="pt" lang="pt-BR">
+        <div class="contact-card">
+          <span class="kicker">Contato e suporte</span>
+          <h2>Adoraríamos ouvir você</h2>
+          <p>Perguntas, correções e ideias são todas bem-vindas. O Consecra é feito por Paulo Branicio, um desenvolvedor independente.</p>
+          <a class="btn btn-primary" href="mailto:braniapps@gmail.com?subject=Consecra%20support"><svg aria-hidden="true"><use href="#i-mail"/></svg>Enviar e-mail</a>
+          <span class="addr">braniapps@gmail.com</span>
+        </div>
+      </div>
+      <div data-lang="es" lang="es">
+        <div class="contact-card">
+          <span class="kicker">Contacto y soporte</span>
+          <h2>Nos encantaría saber de ti</h2>
+          <p>Preguntas, correcciones e ideas son bienvenidas. Consecra es obra de Paulo Branicio, un desarrollador independiente.</p>
+          <a class="btn btn-primary" href="mailto:braniapps@gmail.com?subject=Consecra%20support"><svg aria-hidden="true"><use href="#i-mail"/></svg>Escribir un correo</a>
+          <span class="addr">braniapps@gmail.com</span>
+        </div>
+      </div>
+      <div data-lang="fr" lang="fr">
+        <div class="contact-card">
+          <span class="kicker">Contact et assistance</span>
+          <h2>Nous serions ravis de te lire</h2>
+          <p>Questions, corrections et idées sont les bienvenues. Consecra est conçue par Paulo Branicio, développeur indépendant.</p>
+          <a class="btn btn-primary" href="mailto:braniapps@gmail.com?subject=Consecra%20support"><svg aria-hidden="true"><use href="#i-mail"/></svg>Écrire un e-mail</a>
+          <span class="addr">braniapps@gmail.com</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="sun" d="M8 22a8 8 0 0 1 16 0z"/><path class="rays" d="M16 5.5v4M7 10.2l2.7 2.7M25 10.2l-2.7 2.7" fill="none" stroke-width="2" stroke-linecap="round"/><path class="line" d="M3.5 25.5h25" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+        Consecra
+      </a>
+      <nav class="foot-links" aria-label="Footer" data-i18n-aria-en="Footer" data-i18n-aria-pt="Rodapé" data-i18n-aria-es="Pie de página" data-i18n-aria-fr="Pied de page">
+        <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte" data-i18n-fr="Assistance">Support</a>
+        <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad" data-i18n-fr="Politique de confidentialité">Privacy Policy</a>
+        <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso" data-i18n-fr="Conditions d’utilisation">Terms of Use</a>
+        <a href="mailto:braniapps@gmail.com?subject=Consecra%20support" data-i18n-en="Contact" data-i18n-pt="Contato" data-i18n-es="Contacto" data-i18n-fr="Contact">Contact</a>
+      </nav>
+      <p class="health" data-i18n-en="Consecra offers spiritual guidance, not medical advice. Follow your doctor’s and your church’s guidance." data-i18n-pt="O Consecra oferece orientação espiritual, não aconselhamento médico. Siga a orientação do seu médico e da sua igreja." data-i18n-es="Consecra ofrece orientación espiritual, no consejo médico. Sigue la guía de tu médico y de tu iglesia." data-i18n-fr="Consecra offre un accompagnement spirituel, pas un avis médical. Suis les conseils de ton médecin et de ton Église.">Consecra offers spiritual guidance, not medical advice. Follow your doctor’s and your church’s guidance.</p>
+      <p class="cr">© 2026 Paulo Branicio</p>
+    </div>
+  </footer>
+</body>
+</html>
