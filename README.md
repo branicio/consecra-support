@@ -1,9 +1,9 @@
-# Consecra — Support
+# Lightfast — Support
 
-Support, legal and group-fast pages for **Consecra: Daniel Fast & Prayer**
-(bundle `com.branicio.consecra`), a Christian spiritual-fasting companion for
+Support, legal and group-fast pages for **Lightfast: Daniel Fast & Prayer**
+(bundle `com.branicio.lightfast`), a Christian spiritual-fasting companion for
 iPhone by Paulo Branicio. Static HTML/CSS/JS, served by GitHub Pages at
-<https://branicio.github.io/consecra-support/>. No build step, no JavaScript
+<https://branicio.github.io/lightfast-support/>. No build step, no JavaScript
 libraries, no cookies, analytics or trackers; the only external resource is
 Google Fonts (Spectral + Figtree).
 
@@ -35,43 +35,43 @@ Catalog (`content/ui/<lang>.json`); keep them in step when the catalog changes.
 
 ## Group-fast links
 
-The app shares `https://branicio.github.io/consecra-support/join/?j=daniel-21&s=2027-01-04&n=Grace%20Church`
+The app shares `https://branicio.github.io/lightfast-support/join/?j=daniel-21&s=2027-01-04&n=Grace%20Church`
 (`DeepLink.swift`). `join/index.html` validates the link with the same rules as
 the app (known journey id, real date within 400 days, group name cleaned to
 letters/digits/basic punctuation, max 60 characters), shows the journey title
 and start date in the visitor's language, writes the group name with
-`textContent` only, and rebuilds `consecra://join?j=…&s=…&n=…` with
+`textContent` only, and rebuilds `lightfast://join?j=…&s=…&n=…` with
 `encodeURIComponent`. Anything invalid shows "This invitation link looks
 incomplete". If a journey is added to the app, add its id and titles to
 `JOURNEYS` in `join/index.html`.
 
 ## Publish (GitHub Pages)
 
-1. Create the public repository `branicio/consecra-support` and push the
+1. Create the public repository `branicio/lightfast-support` and push the
    *contents* of this folder to the root of its `main` branch.
 2. On GitHub: **Settings › Pages › Build and deployment › Source: Deploy from a
    branch**, branch `main`, folder `/ (root)`, Save.
-3. After a minute, check <https://branicio.github.io/consecra-support/>,
+3. After a minute, check <https://branicio.github.io/lightfast-support/>,
    `privacy.html#portugues`, `terms.html#francais`, a missing path (404 page)
    and `join/?j=daniel-21&s=2027-01-04&n=Grace%20Church`.
 
-`404.html` uses absolute `/consecra-support/…` paths because GitHub Pages
+`404.html` uses absolute `/lightfast-support/…` paths because GitHub Pages
 serves it at whatever URL was missing; update them if the site ever moves to a
 custom domain.
 
 ## TODO
 
 - [ ] **Set `APP_STORE_URL`** at the top of the script in `join/index.html`
-      once Consecra has an App Store ID (e.g.
+      once Lightfast has an App Store ID (e.g.
       `https://apps.apple.com/app/id0000000000`). Until then the
-      "Get Consecra on the App Store" buttons are hidden (the page still tells
+      "Get Lightfast on the App Store" buttons are hidden (the page still tells
       visitors to get the app from the App Store).
 
 ## Links
 
-- [Support](https://branicio.github.io/consecra-support/)
-- [Privacy Policy](https://branicio.github.io/consecra-support/privacy.html) · [pt](https://branicio.github.io/consecra-support/privacy.html#portugues) · [es](https://branicio.github.io/consecra-support/privacy.html#espanol) · [fr](https://branicio.github.io/consecra-support/privacy.html#francais)
-- [Terms of Use](https://branicio.github.io/consecra-support/terms.html) · [pt](https://branicio.github.io/consecra-support/terms.html#portugues) · [es](https://branicio.github.io/consecra-support/terms.html#espanol) · [fr](https://branicio.github.io/consecra-support/terms.html#francais)
+- [Support](https://branicio.github.io/lightfast-support/)
+- [Privacy Policy](https://branicio.github.io/lightfast-support/privacy.html) · [pt](https://branicio.github.io/lightfast-support/privacy.html#portugues) · [es](https://branicio.github.io/lightfast-support/privacy.html#espanol) · [fr](https://branicio.github.io/lightfast-support/privacy.html#francais)
+- [Terms of Use](https://branicio.github.io/lightfast-support/terms.html) · [pt](https://branicio.github.io/lightfast-support/terms.html#portugues) · [es](https://branicio.github.io/lightfast-support/terms.html#espanol) · [fr](https://branicio.github.io/lightfast-support/terms.html#francais)
 
 ## Contact
 

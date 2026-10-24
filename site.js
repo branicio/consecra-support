@@ -17,13 +17,14 @@
     // a region-tagged variant. Portuguese is Brazilian, as in the app.
     var LANG_ATTR = { en: "en", pt: "pt-BR", es: "es", fr: "fr" };
     var FRAGMENT = { pt: "#portugues", es: "#espanol", fr: "#francais", en: "" };
-    var STORE_KEY = "consecra.lang";
+    var STORE_KEY = "lightfast.lang";
     // The real pages of this site, keyed by filename (join/index.html links
     // back with "../index.html", whose last segment is also index.html).
-    // Everything else an <a> can point at — mailto:, consecra://, in-page
+    // Everything else an <a> can point at — mailto:, lightfast://, in-page
     // anchors like #faq — is deliberately absent: a language fragment on those
     // is meaningless at best and breaks the target at worst.
-    var PAGES = { "index.html": true, "privacy.html": true, "terms.html": true };
+    var PAGES = { "index.html": true, "privacy.html": true, "terms.html": true,
+                  "privacy-android.html": true, "terms-android.html": true };
 
     // A function rather than a map lookup, so that no inherited Object
     // property ("constructor", "toString", ...) can pass as a stored language.
@@ -65,7 +66,7 @@
 
     // In-site page links, collected once. apply() rewrites their fragment so
     // the reader's language survives the click. Absolute and scheme-bearing
-    // hrefs (mailto:, https:, consecra:, protocol-relative //host) drop out
+    // hrefs (mailto:, https:, lightfast:, protocol-relative //host) drop out
     // before the filename test.
     var pageLinks = [];
     Array.prototype.slice.call(document.querySelectorAll("a[href]")).forEach(function (a) {
@@ -83,7 +84,7 @@
     function openStore(name) {
       try {
         var s = window[name];
-        var probe = "consecra.probe";
+        var probe = "lightfast.probe";
         s.setItem(probe, "1");
         s.removeItem(probe);
         return s;
@@ -186,7 +187,7 @@
 
       // Pages with their own dynamic text (join/) listen for this.
       try {
-        document.dispatchEvent(new CustomEvent("consecra:lang", { detail: { lang: lang } }));
+        document.dispatchEvent(new CustomEvent("lightfast:lang", { detail: { lang: lang } }));
       } catch (e) { /* very old browsers: nothing listens anyway */ }
 
       return lang;
