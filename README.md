@@ -2,7 +2,7 @@
 
 Support, legal and group-fast pages for **Lightfast: Daniel Fast & Prayer**
 (bundle `com.branicio.lightfast`), a Christian spiritual-fasting companion for
-iPhone by Paulo Branicio. Static HTML/CSS/JS, served by GitHub Pages at
+iPhone. Static HTML/CSS/JS, served by GitHub Pages at
 <https://branicio.github.io/lightfast-support/>. No build step, no JavaScript
 libraries, no cookies, analytics or trackers; the only external resource is
 Google Fonts (Spectral + Figtree).
