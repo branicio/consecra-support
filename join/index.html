@@ -109,13 +109,13 @@
           <li>No celular, toque em <strong>Abrir no Lightfast</strong>.</li>
           <li>Toque em <strong>Participar do jejum</strong>. A jornada começa no mesmo dia para todo o grupo.</li>
         </ol>
-        <p>Ainda não tem o Lightfast? Baixe na App Store, no iPhone, ou no Google Play, no Android, volte a esta página e toque em Abrir no Lightfast.</p>
-        <p>Participar é grátis, não exige conta e funciona do mesmo jeito no iPhone e no Android. O próprio link leva a jornada, a data de início e o nome do grupo; esta página os lê no seu navegador, e o Lightfast não tem servidor que os guarde.</p>
+        <p>Ainda não tem o Lightfast? Baixe o app na App Store (iPhone) ou no Google Play (Android), depois volte a esta página e toque em Abrir no Lightfast.</p>
+        <p>Participar é grátis, não exige conta e funciona do mesmo jeito no iPhone e no Android. O próprio link contém a jornada, a data de início e o nome do grupo; esta página os lê no seu navegador, e o Lightfast não tem servidor que os guarde.</p>
       </div>
       <section class="problem" data-view="invalid" hidden>
         <img class="icon" src="../app-icon.png" width="84" height="84" alt="Lightfast">
         <h1>Este link de convite parece incompleto</h1>
-        <p>Parte do link pode ter se perdido ao ser compartilhada. Peça a quem convidou você que o envie de novo, ou abra o Lightfast e comece a jornada você mesmo.</p>
+        <p>Parte do link pode ter se perdido quando ele foi compartilhado. Peça a quem convidou você que o envie de novo, ou abra o Lightfast e comece a jornada você mesmo.</p>
         <div class="actions">
           <a class="btn btn-primary" data-slot="store-ios" href="../index.html">Baixe o Lightfast na App Store</a>
           <a class="btn btn-primary" data-slot="store-android" href="../index.html">Baixe o Lightfast no Google Play</a>
@@ -176,13 +176,13 @@
         <a class="btn btn-ghost" data-slot="store-android" href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14"/></svg>Télécharge Lightfast sur Google Play</a>
       </div>
       <div class="how" data-view="valid" hidden>
-        <h2>Comment rejoindre</h2>
+        <h2>Comment rejoindre le jeûne</h2>
         <ol>
           <li>Sur ton téléphone, touche <strong>Ouvrir dans Lightfast</strong>.</li>
           <li>Touche <strong>Rejoindre le jeûne</strong>. Le parcours commence le même jour pour tout le groupe.</li>
         </ol>
         <p>Tu n’as pas encore Lightfast&nbsp;? Télécharge-la sur l’App Store (iPhone) ou sur Google Play (Android), reviens sur cette page et touche Ouvrir dans Lightfast.</p>
-        <p>Rejoindre est gratuit, ne demande aucun compte et fonctionne de la même façon sur iPhone et sur Android. Le lien lui-même contient le parcours, la date de début et le nom du groupe&nbsp;; cette page les lit dans ton navigateur, et Lightfast n’a aucun serveur qui les conserve.</p>
+        <p>Rejoindre le jeûne est gratuit, ne demande aucun compte et fonctionne de la même façon sur iPhone et sur Android. Le lien lui-même contient le parcours, la date de début et le nom du groupe&nbsp;; cette page les lit dans ton navigateur, et Lightfast n’a aucun serveur qui les conserve.</p>
       </div>
       <section class="problem" data-view="invalid" hidden>
         <img class="icon" src="../app-icon.png" width="84" height="84" alt="Lightfast">
@@ -209,7 +209,7 @@
         <a href="../terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de uso" data-i18n-es="Términos de uso" data-i18n-fr="Conditions d’utilisation">Terms of Use</a>
         <a href="mailto:braniapps@gmail.com?subject=Lightfast%20support" data-i18n-en="Contact" data-i18n-pt="Contato" data-i18n-es="Contacto" data-i18n-fr="Contact">Contact</a>
       </nav>
-      <p class="health" data-i18n-en="Lightfast offers spiritual guidance, not medical advice. Follow your doctor’s and your church’s guidance." data-i18n-pt="O Lightfast oferece orientação espiritual, não aconselhamento médico. Siga a orientação do seu médico e da sua igreja." data-i18n-es="Lightfast ofrece orientación espiritual, no consejo médico. Sigue la guía de tu médico y de tu iglesia." data-i18n-fr="Lightfast offre un accompagnement spirituel, pas un avis médical. Suis les conseils de ton médecin et de ton Église.">Lightfast offers spiritual guidance, not medical advice. Follow your doctor’s and your church’s guidance.</p>
+      <p class="health" data-i18n-en="Lightfast offers spiritual guidance, not medical advice. Follow your doctor’s and your church’s guidance." data-i18n-pt="O Lightfast oferece orientação espiritual, não aconselhamento médico. Siga a orientação do seu médico e da sua igreja." data-i18n-es="Lightfast ofrece orientación espiritual, no consejo médico. Sigue las indicaciones de tu médico y de tu iglesia." data-i18n-fr="Lightfast offre un accompagnement spirituel, pas un avis médical. Suis les conseils de ton médecin et de ton Église.">Lightfast offers spiritual guidance, not medical advice. Follow your doctor’s and your church’s guidance.</p>
       <p class="cr">© 2026 Lightfast</p>
     </div>
   </footer>
@@ -219,13 +219,15 @@
     "use strict";
 
     // Store links, one per platform; both buttons show when both are set, iPhone
-    // first. TODO: set each once the app is public in that store, e.g.
-    // "https://apps.apple.com/app/id0000000000" and
-    // "https://play.google.com/store/apps/details?id=com.branicio.lightfast"
-    // (closed testing only for now: that page shows "not found" to non-testers).
+    // first. Google Play: the listing works now for opted-in closed-test testers
+    // and for everyone at launch. TODO: set the App Store URL
+    // ("https://apps.apple.com/app/id…") once the App Store Connect record exists.
     // While a URL is empty its button is hidden — a button naming a store must
     // never lead anywhere else — and the text still says where to get the app.
-    var STORE_URLS = { "store-ios": "", "store-android": "" };
+    var STORE_URLS = {
+      "store-ios": "",
+      "store-android": "https://play.google.com/store/apps/details?id=com.branicio.lightfast"
+    };
 
     // These rules mirror both apps' invitation parsers (iOS
     // Lightfast/Shared/Logic/DeepLink.swift, Android domain/DeepLink.kt), so this
@@ -293,7 +295,7 @@
         en: ["Ezra’s Fast", "One day of fasting for guidance before a decision or journey"],
         pt: ["O Jejum de Esdras", "Um dia de jejum por direção antes de uma decisão ou viagem"],
         es: ["El ayuno de Esdras", "Un día de ayuno para pedir dirección ante una decisión o un viaje"],
-        fr: ["Le jeûne d’Esdras", "Un jour de jeûne pour chercher la direction de Dieu avant un départ"]
+        fr: ["Le jeûne d’Esdras", "Un jour de jeûne pour chercher Dieu avant une décision ou un départ"]
       },
       "weekly-rhythm": {
         en: ["Wednesday & Friday Fast", "An ancient weekly rhythm of hunger, prayer and giving"],
@@ -314,7 +316,7 @@
       en: { today: "Starts today", tomorrow: "Starts tomorrow", future: "Starts in {n} days", yesterday: "Started yesterday", past: "Started {n} days ago" },
       pt: { today: "Começa hoje", tomorrow: "Começa amanhã", future: "Começa em {n} dias", yesterday: "Começou ontem", past: "Começou há {n} dias" },
       es: { today: "Empieza hoy", tomorrow: "Empieza mañana", future: "Empieza en {n} días", yesterday: "Empezó ayer", past: "Empezó hace {n} días" },
-      fr: { today: "Commence aujourd’hui", tomorrow: "Commence demain", future: "Commence dans {n} jours", yesterday: "A commencé hier", past: "A commencé il y a {n} jours" }
+      fr: { today: "Début aujourd’hui", tomorrow: "Début demain", future: "Début dans {n} jours", yesterday: "A commencé hier", past: "A commencé il y a {n} jours" }
     };
 
     function has(obj, key) { return Object.prototype.hasOwnProperty.call(obj, key); }
@@ -376,6 +378,8 @@
         var text = new Intl.DateTimeFormat(LOCALES[lang], {
           weekday: "long", year: "numeric", month: "long", day: "numeric", timeZone: "UTC"
         }).format(date);
+        // French writes the first day of a month as an ordinal: "1er novembre".
+        if (lang === "fr") text = text.replace(/(^|\s)1(?=\s)/, "$11er");
         // pt/es/fr write weekdays in lower case; this line stands alone, so
         // capitalise its first letter.
         return text.charAt(0).toLocaleUpperCase(LOCALES[lang]) + text.slice(1);

@@ -49,6 +49,7 @@
       if (id) t.setAttribute("aria-controls", id);
     });
 
+    // This includes <title>, so the browser tab follows the chosen language too.
     // Capture each translatable element's authored text once, before any
     // switch can overwrite it, so PT -> ES on an element with no
     // data-i18n-es restores the English baseline instead of leaving stale

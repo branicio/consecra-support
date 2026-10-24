@@ -42,7 +42,8 @@ recognition (Vision vs Tesseract), purchases, managing, restoring, Family
 Sharing, refunds and the store terms (Apple's standard EULA vs Google Play).
 Each platform keeps its own vocabulary (Apple Account, Settings › [your name] ›
 Subscriptions; Google Account, Play Store › Payments & subscriptions). Headings
-in pt/es/fr use sentence case.
+in pt/es/fr use sentence case, and every page's browser-tab title follows the
+chosen language (`data-i18n-*` on `<title>`; the join page retitles itself).
 
 French addresses the reader as *tu*, matching the app's content guide.
 The pt/es/fr names of in-app buttons, tabs and screens (e.g. es *jornada*,
@@ -78,12 +79,13 @@ custom domain.
 
 ## TODO
 
-- [ ] **Set `STORE_URLS`** at the top of the script in `join/index.html` once
-      each app is public: `store-ios` (e.g. `https://apps.apple.com/app/id0000000000`)
-      and `store-android` (`https://play.google.com/store/apps/details?id=com.branicio.lightfast`;
-      while the Android app is in closed testing that page shows "not found" to
-      non-testers). Until a URL is set its button is hidden; the text still says
-      to get the app from the App Store or Google Play.
+- [ ] **Set `STORE_URLS["store-ios"]`** at the top of the script in
+      `join/index.html` (e.g. `https://apps.apple.com/app/id0000000000`) once the
+      App Store Connect record exists. Until then the App Store button is hidden;
+      the text still says to get the app from the App Store or Google Play.
+      `store-android` is already set to
+      `https://play.google.com/store/apps/details?id=com.branicio.lightfast`
+      (it works for opted-in closed-test testers now and for everyone at launch).
 
 ## Links
 
