@@ -29,8 +29,9 @@ is never hidden. The app's legal links (`Legal.privacy/terms` in
 `PaywallView.swift`) append the fragment for the in-app language.
 
 French addresses the reader as *tu*, matching the app's content guide.
-The pt/es/fr names of in-app buttons and screens were written before the app's
-String Catalog was translated; align them with the catalog once it is.
+The pt/es/fr names of in-app buttons, tabs and screens (e.g. es *jornada*,
+*Ora como Daniel*, *Ayuno digital*; fr *Aliments*) follow the app's String
+Catalog (`content/ui/<lang>.json`); keep them in step when the catalog changes.
 
 ## Group-fast links
 
@@ -63,7 +64,8 @@ custom domain.
 - [ ] **Set `APP_STORE_URL`** at the top of the script in `join/index.html`
       once Consecra has an App Store ID (e.g.
       `https://apps.apple.com/app/id0000000000`). Until then the
-      "Get Consecra on the App Store" buttons point to this support site.
+      "Get Consecra on the App Store" buttons are hidden (the page still tells
+      visitors to get the app from the App Store).
 
 ## Links
 
