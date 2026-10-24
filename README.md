@@ -1,8 +1,8 @@
 # Lightfast — Support
 
-Support, legal and group-fast pages for **Lightfast: Daniel Fast & Prayer**
-(bundle `com.branicio.lightfast`), a Christian spiritual-fasting companion for
-iPhone. Static HTML/CSS/JS, served by GitHub Pages at
+Support, legal and group-fast pages for **Lightfast: Daniel Fast**
+(`com.branicio.lightfast` on both platforms), a Christian spiritual-fasting
+companion for iPhone and Android. Static HTML/CSS/JS, served by GitHub Pages at
 <https://branicio.github.io/lightfast-support/>. No build step, no JavaScript
 libraries, no cookies, analytics or trackers; the only external resource is
 Google Fonts (Spectral + Figtree).
@@ -10,8 +10,9 @@ Google Fonts (Spectral + Figtree).
 | File | What it is |
 |---|---|
 | `index.html` | Support page: features, the 11 journeys, food guide and scanner, group fasts, Free vs Plus, FAQ, contact |
-| `privacy.html` | Privacy Policy (effective October 20, 2026) |
-| `terms.html` | Terms of Use / EULA (effective October 20, 2026) |
+| `privacy.html` | Privacy Policy for both apps (effective October 24, 2026) |
+| `terms.html` | Terms of Use / EULA for both apps (effective October 24, 2026) |
+| `privacy-android.html`, `terms-android.html` | Redirects to `privacy.html` / `terms.html` that keep the language fragment (older Android builds and the first Play listing linked here) |
 | `join/index.html` | Group-fast invitation landing page (`/join/?j=<journey>&s=<yyyy-MM-dd>&n=<group name>`) |
 | `404.html` | Not-found page (GitHub Pages serves it for any missing path) |
 | `styles.css`, `site.js`, `app-icon.png` | Shared styles, language switcher, 512 px app icon |
@@ -25,8 +26,23 @@ carries `[data-lang]` blocks for all four languages, shared chrome uses
 chosen by the `#portugues` / `#espanol` / `#francais` URL fragment, then the
 EN · PT · ES · FR tabs (remembered in `localStorage`), then the browser
 language. Without JavaScript the four languages render stacked, so legal text
-is never hidden. The app's legal links (`Legal.privacy/terms` in
-`PaywallView.swift`) append the fragment for the in-app language.
+is never hidden. Both apps' legal links append the fragment for the in-app language
+(iOS `Legal.privacy/terms` in `PaywallView.swift`, Android `Links` in
+`LightfastRoot.kt`).
+
+## One site for iPhone and Android
+
+The pages serve both apps equally. Text is written for a phone owner first
+("your phone", "the app"); where the platforms really differ, the difference is
+stated as a pair — **On iPhone:** … / **On Android:** … (pt *No iPhone / No
+Android*, es *En iPhone / En Android*, fr *Sur iPhone / Sur Android*) — with the
+same depth on each side and iPhone always first: backups and new phones,
+Live Activity vs the ongoing fast notification, widgets, the camera and text
+recognition (Vision vs Tesseract), purchases, managing, restoring, Family
+Sharing, refunds and the store terms (Apple's standard EULA vs Google Play).
+Each platform keeps its own vocabulary (Apple Account, Settings › [your name] ›
+Subscriptions; Google Account, Play Store › Payments & subscriptions). Headings
+in pt/es/fr use sentence case.
 
 French addresses the reader as *tu*, matching the app's content guide.
 The pt/es/fr names of in-app buttons, tabs and screens (e.g. es *jornada*,
@@ -35,9 +51,10 @@ Catalog (`content/ui/<lang>.json`); keep them in step when the catalog changes.
 
 ## Group-fast links
 
-The app shares `https://branicio.github.io/lightfast-support/join/?j=daniel-21&s=2027-01-04&n=Grace%20Church`
-(`DeepLink.swift`). `join/index.html` validates the link with the same rules as
-the app (known journey id, real date within 400 days, group name cleaned to
+Both apps share `https://branicio.github.io/lightfast-support/join/?j=daniel-21&s=2027-01-04&n=Grace%20Church`
+(iOS `DeepLink.swift`, Android `DeepLink.kt`), and either app opens a link made
+by the other. `join/index.html` validates the link with the same rules as
+the apps (known journey id, real date within 400 days, group name cleaned to
 letters/digits/basic punctuation, max 60 characters), shows the journey title
 and start date in the visitor's language, writes the group name with
 `textContent` only, and rebuilds `lightfast://join?j=…&s=…&n=…` with
@@ -61,11 +78,12 @@ custom domain.
 
 ## TODO
 
-- [ ] **Set `APP_STORE_URL`** at the top of the script in `join/index.html`
-      once Lightfast has an App Store ID (e.g.
-      `https://apps.apple.com/app/id0000000000`). Until then the
-      "Get Lightfast on the App Store" buttons are hidden (the page still tells
-      visitors to get the app from the App Store).
+- [ ] **Set `STORE_URLS`** at the top of the script in `join/index.html` once
+      each app is public: `store-ios` (e.g. `https://apps.apple.com/app/id0000000000`)
+      and `store-android` (`https://play.google.com/store/apps/details?id=com.branicio.lightfast`;
+      while the Android app is in closed testing that page shows "not found" to
+      non-testers). Until a URL is set its button is hidden; the text still says
+      to get the app from the App Store or Google Play.
 
 ## Links
 

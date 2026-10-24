@@ -7,7 +7,7 @@
   // so any failure to complete setup must withdraw that authorisation
   // rather than leave content hidden with nothing left running to recover
   // it. Showing the wrong language is a cosmetic bug; showing none would
-  // hide a legal document from a user or an App Store reviewer.
+  // hide a legal document from a user or an app reviewer.
   document.documentElement.dataset.js = "on";
 
   try {
