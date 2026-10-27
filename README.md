@@ -10,7 +10,7 @@ Google Fonts (Spectral + Figtree).
 | File | What it is |
 |---|---|
 | `index.html` | Support page: features, the 11 journeys, food guide and scanner, group fasts, Free vs Plus, FAQ, contact |
-| `privacy.html` | Privacy Policy for both apps (effective October 24, 2026) |
+| `privacy.html` | Privacy Policy for both apps (effective October 27, 2026) |
 | `terms.html` | Terms of Use / EULA for both apps (effective October 24, 2026) |
 | `privacy-android.html`, `terms-android.html` | Redirects to `privacy.html` / `terms.html` that keep the language fragment (older Android builds and the first Play listing linked here) |
 | `join/index.html` | Group-fast invitation landing page (`/join/?j=<journey>&s=<yyyy-MM-dd>&n=<group name>`) |
