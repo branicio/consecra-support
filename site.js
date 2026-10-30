@@ -1,7 +1,7 @@
 (function () {
   // Set first: styles.css only hides languages once this is present, so a
   // script error before this line (e.g. a parse failure) degrades to all
-  // four languages shown stacked, never to none. Everything AFTER it runs
+  // five languages shown stacked, never to none. Everything AFTER it runs
   // inside the try/catch below, whose catch removes this very attribute:
   // it is what authorises the stylesheet to hide any [data-lang] section,
   // so any failure to complete setup must withdraw that authorisation
@@ -11,12 +11,13 @@
   document.documentElement.dataset.js = "on";
 
   try {
-    var HASH = { portugues: "pt", espanol: "es", francais: "fr", top: "en" };
+    var HASH = { portugues: "pt", espanol: "es", francais: "fr", italiano: "it", top: "en" };
     // The app's Spanish is plain `es` (neutral Latin American register) and its
-    // French is plain `fr`, so the document language mirrors those rather than
-    // a region-tagged variant. Portuguese is Brazilian, as in the app.
-    var LANG_ATTR = { en: "en", pt: "pt-BR", es: "es", fr: "fr" };
-    var FRAGMENT = { pt: "#portugues", es: "#espanol", fr: "#francais", en: "" };
+    // French and Italian are plain `fr` and `it`, so the document language
+    // mirrors those rather than a region-tagged variant. Portuguese is
+    // Brazilian, as in the app.
+    var LANG_ATTR = { en: "en", pt: "pt-BR", es: "es", fr: "fr", it: "it" };
+    var FRAGMENT = { pt: "#portugues", es: "#espanol", fr: "#francais", it: "#italiano", en: "" };
     var STORE_KEY = "lightfast.lang";
     // The real pages of this site, keyed by filename (join/index.html links
     // back with "../index.html", whose last segment is also index.html).
@@ -28,7 +29,7 @@
 
     // A function rather than a map lookup, so that no inherited Object
     // property ("constructor", "toString", ...) can pass as a stored language.
-    function isLang(v) { return v === "en" || v === "pt" || v === "es" || v === "fr"; }
+    function isLang(v) { return v === "en" || v === "pt" || v === "es" || v === "fr" || v === "it"; }
 
     var sections = Array.prototype.slice.call(document.querySelectorAll("[data-lang]"));
     var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"][data-lang-target]'));
@@ -112,7 +113,7 @@
 
     function pick() {
       // A language named in the URL outranks the stored preference on purpose:
-      // #portugues / #espanol / #francais / #top is an explicit, per-visit
+      // #portugues / #espanol / #francais / #italiano / #top is an explicit, per-visit
       // request — the app's legal links carry the fragment for the in-app
       // language — while the stored value only records what this browser
       // chose last time. Then the browser's own language.
@@ -124,6 +125,7 @@
       if (n.indexOf("pt") === 0) return "pt";
       if (n.indexOf("es") === 0) return "es";
       if (n.indexOf("fr") === 0) return "fr";
+      if (n.indexOf("it") === 0) return "it";
       return "en";
     }
 
@@ -218,7 +220,7 @@
     // Persist only what the reader actually asked for: a URL that names a
     // language counts; a language inferred from navigator.language does not.
     if (HASH[initialHash]) remember(initialLang);
-    // Only re-derive the language when the new hash names one of the four
+    // Only re-derive the language when the new hash names one of the five
     // language anchors; ordinary anchors (#faq, #main) leave it alone.
     window.addEventListener("hashchange", function () {
       var h = (location.hash || "").replace("#", "").toLowerCase();
@@ -227,7 +229,7 @@
 
   } catch (err) {
     // Setup did not complete, so withdraw the authorisation data-js grants
-    // the stylesheet to hide content: the four languages render stacked.
+    // the stylesheet to hide content: the five languages render stacked.
     document.documentElement.removeAttribute("data-js");
     if (window.console && console.error) {
       console.error("site.js: language-tab setup failed, falling back to the stacked view", err);

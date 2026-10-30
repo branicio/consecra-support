@@ -565,7 +565,7 @@ section.block { padding-top: 64px; padding-bottom: 64px; }
 /* ---------------------------------------------------------- language visibility */
 /* Language sections are hidden ONLY under the authorisation of data-js on
    <html>, which site.js sets first and withdraws if setup fails. Without it
-   all four languages render stacked: showing four languages is a cosmetic
+   all five languages render stacked: showing five languages is a cosmetic
    failure; showing none would hide a legal document. Never hide [data-lang]
    outside an html[data-js="on"] scope. */
 html[data-js="on"] [data-lang] { display: none; }
